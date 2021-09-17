@@ -1,0 +1,40 @@
+---
+Record_ID: 
+  netsuiteId :  # Netsuite field id
+  type: text
+
+Owned_By : 
+  netsuiteId :  # Netsuite field id
+  type: text
+
+Company : # HAS TO MATCH EXISTING COMPANY IN NETSUITE
+  netsuiteId :  # Netsuite field id
+  type: text
+
+Value : 
+  netsuiteId :  # Netsuite field id
+  type: number
+  default: 1000
+
+Stage_Name: 
+  netsuiteId :  # Netsuite field id
+  type: text
+  default: Qualification
+  allowedValues: 
+  - Contract Sent
+  - Lost
+  - Needs Analysis
+  - Negotiation
+  - Proposal Approved
+  - Proposal Sent
+  - Purgatory
+  - Qualification
+  - Won/Closed
+
+Status: 
+  netsuiteId :  # Netsuite field id
+  type: text
+  default: Open
+  allowedValues: 
+  - Open
+  - Closed

@@ -1,0 +1,20 @@
+---
+Record_ID:
+  netsuiteId: # Netsuite field id
+  type: text
+
+Owned_By:
+  netsuiteId: # Netsuite field id
+  type: text
+
+Status: 
+  netsuiteId :  # Netsuite field id
+  type: text
+  default: Open
+  allowedValues: 
+  - New
+  - Needs Analysis
+  - Unqualified
+  - Junk
+  - Contact Attempted
+  - Purgatory

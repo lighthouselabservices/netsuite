@@ -1,128 +1,128 @@
 ---
-Record_ID: 
-  netsuiteId :  # Netsuite field id
+Record_ID:
+  netsuiteId: # Netsuite field id
   type: text
 
-Owned_By : 
-  netsuiteId :  # Netsuite field id
+Owned_By:
+  netsuiteId: # Netsuite field id
   type: text
 
-Company : # HAS TO MATCH EXISTING COMPANY IN NETSUITE
-  netsuiteId :  # Netsuite field id
+Company: # HAS TO MATCH EXISTING COMPANY IN NETSUITE
+  netsuiteId: # Netsuite field id
   type: text
 
-Value : 
-  netsuiteId :  # Netsuite field id
+Value:
+  netsuiteId: # Netsuite field id
   type: number
   default: 1000
 
-Stage_Name: 
-  netsuiteId :  # Netsuite field id
+Stage_Name:
+  netsuiteId: # Netsuite field id
   type: text
   default: Qualification
-  allowedValues: 
-  - Contract Sent
-  - Lost
-  - Needs Analysis
-  - Negotiation
-  - Proposal Approved
-  - Proposal Sent
-  - Purgatory
-  - Qualification
-  - Won/Closed
+  allowedValues:
+    - Contract Sent
+    - Lost
+    - Needs Analysis
+    - Negotiation
+    - Proposal Approved
+    - Proposal Sent
+    - Purgatory
+    - Qualification
+    - Won/Closed
 
-Status: 
-  netsuiteId :  # Netsuite field id
+Status:
+  netsuiteId: # Netsuite field id
   type: text
   default: Open
-  allowedValues: 
-  - Won
-  - Abandoned
-  - Lost
-  - Open
-
-Lab_Type :
-  netsuiteId :  # Netsuite field id
-  type : text
   allowedValues:
-  - Reference
-  - POL
-  - Hospital
-  - Other
+    - Won
+    - Abandoned
+    - Lost
+    - Open
 
-Type_of_Testing :
-  netsuiteId :  # Netsuite field id
+Lab_Type:
+  netsuiteId: # Netsuite field id
+  type: text
+  allowedValues:
+    - Reference
+    - POL
+    - Hospital
+    - Other
+
+Type_of_Testing:
+  netsuiteId: # Netsuite field id
   type: text
   default: Other
   allowedValues:
-  - Blood
-  - Cannabis
-  - Covid
-  - Cytology
-  - General Chemistries
-  - Histology
-  - Microbiology
-  - Molecular
-  - Other
-  - Tox
+    - Blood
+    - Cannabis
+    - Covid
+    - Cytology
+    - General Chemistries
+    - Histology
+    - Microbiology
+    - Molecular
+    - Other
+    - Tox
 
-Existing_Lines_of_Service :
-  netsuiteId :  # Netsuite field id
+Existing_Lines_of_Service:
+  netsuiteId: # Netsuite field id
   type: text
   default: Other
   allowedValues:
-  - None
-  - Blood
-  - Covid
-  - Cytology
-  - General Chemistry
-  - Histology
-  - Microbiology
-  - Molecular
-  - Tox
-  - Other
+    - None
+    - Blood
+    - Covid
+    - Cytology
+    - General Chemistry
+    - Histology
+    - Microbiology
+    - Molecular
+    - Tox
+    - Other
 
-Source :
-  netsuiteId :  # Netsuite field id
+Source:
+  netsuiteId: # Netsuite field id
   type: text
   default: No Source
-  allowedValues: 
-  - No Source
-  - Webform - Lighthouse
-  - Webform - Elite
-  - Webform - Lighthouse (PTLD)
-  - Webform - Lighthouse (Recruiting)
-  - Webform (Lighthouse - General Inquiry)
-  - Phone Lead - Lighthouse
-  - Phone Lead - Elite
-  - Employee Referral
-  - Client Referral
-  - Medline Referral
-  - Vendor Referral
-  - BD Austin Dickson
-  - BD Morgan Burch
-  - Legacy
-  - LinkedIn
-  - Lighthouse
-  - Other
-  - Webinar
-  - Advertising
-  - Trade Show
-  - Cold Call
-  - Email - Lighthouse
-  - Newsletter Lead
-  - Distributor Form - Elite
-  - Webform - Lighthouse (Covid)
-  - BD Jack
-  - BD Justin
-  - Webform - Beaconlis
+  allowedValues:
+    - No Source
+    - Webform - Lighthouse
+    - Webform - Elite
+    - Webform - Lighthouse (PTLD)
+    - Webform - Lighthouse (Recruiting)
+    - Webform (Lighthouse - General Inquiry)
+    - Phone Lead - Lighthouse
+    - Phone Lead - Elite
+    - Employee Referral
+    - Client Referral
+    - Medline Referral
+    - Vendor Referral
+    - BD Austin Dickson
+    - BD Morgan Burch
+    - Legacy
+    - LinkedIn
+    - Lighthouse
+    - Other
+    - Webinar
+    - Advertising
+    - Trade Show
+    - Cold Call
+    - Email - Lighthouse
+    - Newsletter Lead
+    - Distributor Form - Elite
+    - Webform - Lighthouse (Covid)
+    - BD Jack
+    - BD Justin
+    - Webform - Beaconlis
 
-Priority :
-  netsuiteId :  # Netsuite field id
+Priority:
+  netsuiteId: # Netsuite field id
   type: text
   default: None
-  allowedValues: 
-  - None
-  - Low
-  - Medium
-  - High
+  allowedValues:
+    - None
+    - Low
+    - Medium
+    - High

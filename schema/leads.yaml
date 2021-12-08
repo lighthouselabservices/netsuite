@@ -14,3 +14,13 @@ leads:
       - Value3
 
   # add more fields
+  - netsuiteId: template # field id of netsuite
+    type: text
+    fieldSource: field # field / formula / const
+    defaultValue: ifAny #any default value
+    copperField: myCopperField # in case of single field copper field id
+    formula: field1 + field2 # in case of formula formula goes here
+    allowedValues:
+      - Value1
+      - Value2
+      - Value3

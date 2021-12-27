@@ -1,55 +1,31 @@
 ---
 # Mapping sales leads in Netsuite from Copper CRM
 leads:
-  # this is template
-  - netsuiteId: template # field id of netsuite
-    type: text
-    fieldSource: field # field / formula / const
-    defaultValue: ifAny #any default value
-    copperField: myCopperField # in case of single field copper field id
-    formula: field1 + field2 # in case of formula formula goes here
-    allowedValues:
-      - Value1
-      - Value2
-      - Value3
-
-  # add more fields
-  - netsuiteId: template # field id of netsuite
-    type: text
-    fieldSource: field # field / formula / const
-    defaultValue: ifAny #any default value
-    copperField: myCopperField # in case of single field copper field id
-    formula: field1 + field2 # in case of formula formula goes here
-    allowedValues:
-      - Value1
-      - Value2
-      - Value3
-      
   - netsuiteId: salutation
     type: text
     fieldSource: field # field / formula / const
     copperField: prefix
-    
+
   - netsuiteId: template # field id of netsuite
     type: firstname
     fieldSource: field # field / formula / const
-    copperField: First Name
-   
+    copperField: First.Name
+
   - netsuiteId: title
     type: text
     fieldSource: field # field / formula / const
     copperField: title
-    
+
   - netsuiteId: companyname
     type: text
     fieldSource: field # field / formula / const
     copperField: Company
-    
+
   - netsuiteId: entity status
     type: text
     fieldSource: field # field / formula / const
     defaultValue: New
-    copperField: Lead Status
+    copperField: Lead.Status
     allowedValues:
       - New
       - Contact Attempted
@@ -58,11 +34,11 @@ leads:
       - Junk
       - Job Seeker
       - Purgatory
-      
+
   - netsuiteId: category
     type: text
     fieldSource: field # field / formula / const
-    copperField: Division of Interest cf_267162
+    copperField: Division.of.Interest cf_267162
     allowedValues:
       - Consulting/Lab Startup
       - Lab Director
@@ -71,22 +47,22 @@ leads:
       - Beacon LIS
       - RCM
       - General Inquiry
-      
+
   - netsuiteId: comments
     type: text
     fieldSource: field # field / formula / const
-    copperField: Webform Info cf_266912
-    
+    copperField: Webform.Info cf_266912
+
   - netsuiteId: email
     type: text
     fieldSource: field # field / formula / const
     copperField: Email
-    
+
   - netsuiteId: phone
     type: text
     fieldSource: field # field / formula / const
     copperField: Phone
-    
+
   - netsuiteId: cseg_lead_source_
     type: text
     fieldSource: field # field / formula / const
@@ -117,28 +93,3 @@ leads:
       - Webform - Lighthouse (Covid)
       - Outbound Sales Team
       - Webform - Beaconlis
-     
- 
-    
-
-    
-    
-  
-    
-    
-    
-    
-    
-    
-    
-   
-      
-   
-      
-      
-      
-      
-      
-    
-    
-   

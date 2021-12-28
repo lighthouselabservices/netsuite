@@ -1,2 +1,3 @@
-# Lighthouse Netsuite Implemenation
-Schemas and scripts for Netsuite implemenation
+# Lighthouse Netsuite Implementation
+
+Schemas and scripts for Netsuite Implementation

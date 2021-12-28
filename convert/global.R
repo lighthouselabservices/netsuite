@@ -1,9 +1,10 @@
-# configurations 
+# configurations
+# nolint
 
-config_options = c(
-  Leads = 'leads.yaml',
-  Opportunities = 'opportunities.yml'
+config_options <- c(
+  Leads = "leads.yaml",
+  Opportunities = "opportunities.yml"
 )
 
 
-source('functions.R')
+source("functions.R")

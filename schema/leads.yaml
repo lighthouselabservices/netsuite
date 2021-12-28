@@ -9,7 +9,7 @@ leads:
   - netsuiteId: template # field id of netsuite
     type: firstname
     fieldSource: field # field / formula / const
-    copperField: First Name
+    copperField: First.Name
 
   - netsuiteId: title
     type: text

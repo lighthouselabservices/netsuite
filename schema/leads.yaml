@@ -51,7 +51,7 @@ leads:
   - netsuiteId: comments
     type: text
     fieldSource: field # field / formula / const
-    copperField: Webform Info cf_266912
+    copperField: Webform.Info.cf_266912
 
   - netsuiteId: email
     type: text

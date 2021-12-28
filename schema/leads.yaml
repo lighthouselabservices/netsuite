@@ -98,3 +98,10 @@ leads:
       - Webform - Lighthouse (Covid)
       - Outbound Sales Team
       - Webform - Beaconlis
+      
+  - netsuiteId: custpage_lsa_vis
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: last.contacted
+    
+    

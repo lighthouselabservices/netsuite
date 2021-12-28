@@ -23,7 +23,11 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
     # create net suite field from copper source field
     if (fld$fieldSource == "field") res_dt[[fld_id]] <- dt_in[[fld$copperField]]
 
-    if (is.null(res_dt[[fld_id]])) next
+    # field not found
+    if (is.null(res_dt[[fld_id]])) {
+       res_dt[[fld_id]] <- "?"
+      next
+      }
 
     # convert to final format
     if (fld$type == "text") res_dt[[fld_id]] <- as.character(res_dt[[fld_id]])
@@ -40,9 +44,11 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
     # check allowed values and replace with default value if missing
 
     is_allowed <- res_dt[[fld_id]] %chin% allowed_values
-    res_dt[!is_allowed][[fld_id]] <- default_value
+    if (!all(is_allowed))  res_dt[!is_allowed][[fld_id]] <- default_value
+    
     # check replacements
     stopifnot(all(res_dt[[fld_id]] %chin% allowed_values))
+    
   }
 
   # remove index column

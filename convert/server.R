@@ -83,7 +83,9 @@ shinyServer(function(input, output, session) {
     dat_view <- DT::datatable(dt_out,
       rownames = FALSE, style = "default", class = "display compact", selection = "single", filter = "top",
       options = list(dom = "ipft", deferRender = TRUE, width = "100%", pageLength = 20)
-    )
+    ) %>% formatStyle(columns = names(dt_out), color = styleEqual("?", "tomato"))
+  
+    
   })
 
   # ------ download results -----

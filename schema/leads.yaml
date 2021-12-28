@@ -24,7 +24,6 @@ leads:
   - netsuiteId: entity status
     type: text
     fieldSource: field # field / formula / const
-    defaultValue: New
     copperField: Lead Status
     allowedValues:
       - New

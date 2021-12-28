@@ -6,10 +6,15 @@ leads:
     fieldSource: field # field / formula / const
     copperField: Prefix
 
-  - netsuiteId: template # field id of netsuite
+  - netsuiteId: first Name # field id of netsuite
     type: firstname
     fieldSource: field # field / formula / const
     copperField: First.Name
+    
+  - netsuiteId: Last Name # field id of netsuite
+    type: firstname
+    fieldSource: field # field / formula / const
+    copperField: Last.Name
 
   - netsuiteId: title
     type: text
@@ -19,7 +24,7 @@ leads:
   - netsuiteId: companyname
     type: text
     fieldSource: field # field / formula / const
-    copperField: Company
+    copperField: Account
 
   - netsuiteId: entity status
     type: text

@@ -4,7 +4,7 @@ leads:
   - netsuiteId: salutation
     type: text
     fieldSource: field # field / formula / const
-    copperField: prefix
+    copperField: Prefix
 
   - netsuiteId: template # field id of netsuite
     type: firstname
@@ -14,7 +14,7 @@ leads:
   - netsuiteId: title
     type: text
     fieldSource: field # field / formula / const
-    copperField: title
+    copperField: Title
 
   - netsuiteId: companyname
     type: text
@@ -51,7 +51,7 @@ leads:
   - netsuiteId: comments
     type: text
     fieldSource: field # field / formula / const
-    copperField: Webform Info cf_266912
+    copperField: Webform.Info.cf_266912
 
   - netsuiteId: email
     type: text

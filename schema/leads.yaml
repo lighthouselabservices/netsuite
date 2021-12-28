@@ -37,7 +37,7 @@ leads:
   - netsuiteId: category
     type: text
     fieldSource: field # field / formula / const
-    copperField: Division of Interest cf_267162
+    copperField: Division.of.Interest.cf_267162
     default: General Inquiry
     allowedValues:
       - Consulting/Lab Startup

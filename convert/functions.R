@@ -53,7 +53,21 @@ ConvertFields <- function(dt_in = NULL, conf = NULL){
 GetConfig <- function(schema_yaml = NULL){
   if(is.null(schema_yaml)) return(NULL)
   
-  conf_yaml = try( yaml::read_yaml(str_glue('https://raw.githubusercontent.com/lighthouselabservices/netsuite/main/schema/{schema_yaml}') ) )
+  local_file = file.path('./data', schema_yaml)
+  
+  # remove old file 
+  if(file.exists(local_file ) ) file.remove(local_file)
+  
+  # download latest file from github
+  res_download = try(download.file(url = str_glue('https://raw.githubusercontent.com/lighthouselabservices/netsuite/main/schema/{schema_yaml}'),
+                destfile = local_file,
+                cacheOK = F
+                )
+  )
+  
+  if (class(res_download)=="try-error") return(NULL)
+  
+  conf_yaml = try( yaml::read_yaml(local_file ) )
   
   if (class(conf_yaml)=="try-error") return(NULL)
   

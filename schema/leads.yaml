@@ -14,7 +14,7 @@ leads:
   - netsuiteId: title
     type: text
     fieldSource: field # field / formula / const
-    copperField: title
+    copperField: Title
 
   - netsuiteId: companyname
     type: text

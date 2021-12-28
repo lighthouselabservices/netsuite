@@ -1,46 +1,34 @@
 ---
-Record_ID:
-  netsuiteId: # Netsuite field id
-  type: text
+opportunities:
+  - netsuiteId: Value
+    type: number
+    default: 1000
+    fieldSource: field # field / formula / const
+    copperField: prefix
 
-Owned_By:
-  netsuiteId: # Netsuite field id
-  type: text
+  - netsuiteId: Stage_Name
+    type: text
+    default: Qualification
+    allowedValues:
+      - Contract Sent
+      - Lost
+      - Needs Analysis
+      - Negotiation
+      - Proposal Approved
+      - Proposal Sent
+      - Purgatory
+      - Qualification
+      - Won/Closed
 
-Company: # HAS TO MATCH EXISTING COMPANY IN NETSUITE
-  netsuiteId: # Netsuite field id
-  type: text
-  
-  
+  - netsuiteId: Lab_Type
+    type: text
+    allowedValues:
+      - Reference
+      - POL
+      - Hospital
+      - Other
 
-Value:
-  netsuiteId: # Netsuite field id
-  type: number
-  default: 1000
-
-Stage_Name:
-  netsuiteId: # Netsuite field id
-  type: text
-  default: Qualification
-  allowedValues:
-    - Contract Sent
-    - Lost
-    - Needs Analysis
-    - Negotiation
-    - Proposal Approved
-    - Proposal Sent
-    - Purgatory
-    - Qualification
-    - Won/Closed
-
-Lab_Type:
-  netsuiteId: # Netsuite field id
-  type: text
-  allowedValues:
-    - Reference
-    - POL
-    - Hospital
-    - Other
+# ----- (VK) CHANGE STRUCTURE BELOW TO MATCH -----
 
 Existing_Lines_of_Service:
   netsuiteId: # Netsuite field id

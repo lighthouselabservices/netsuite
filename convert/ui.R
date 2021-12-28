@@ -54,7 +54,7 @@ shinyUI(bs4DashPage(
   
   # ---- footer ----
   
-  footer = bs4DashFooter(left = str_glue('(c) Lighthouse Lab Services {format(Sys.Date(), "%Y")}'), right = conf$contact, fixed = TRUE),
+  # footer = bs4DashFooter(left = str_glue('(c) Lighthouse Lab Services {format(Sys.Date(), "%Y")}'), right = conf$contact, fixed = TRUE),
   
   
   # ---- left bar ----
@@ -117,11 +117,16 @@ shinyUI(bs4DashPage(
         side ='right',
         id = "result_body",
         title = "Conversion",
-        selected = "Input Table",
         status = "secondary",
         solidHeader = F,
         type = "tabs",
         collapsible = F,
+        
+        tabPanel(
+          title = "Conversion Config",
+          div( jsoneditOutput('conf', width = "100%", height = "600px") )
+          
+        ),
         
         
         tabPanel(
@@ -143,12 +148,6 @@ shinyUI(bs4DashPage(
               DT::dataTableOutput("dt_fields")
           )
           
-          
-        ),
-        
-        tabPanel(
-          title = "Conversion Config",
-          div( jsoneditOutput('conf', width = "100%", height = "600px") )
           
         ),
         

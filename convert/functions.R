@@ -9,7 +9,7 @@ ConvertFields <- function(dt_in = NULL, conf = NULL){
   if(is.null(conf)) return(NULL)
   
   # init results 
-  res_dt = data.table(Index = 1:nrow(dt_source))
+  res_dt = data.table(Index = 1:nrow(dt_in))
   
   for(fld in conf){
     

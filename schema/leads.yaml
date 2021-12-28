@@ -61,7 +61,7 @@ leads:
   - netsuiteId: phone
     type: text
     fieldSource: field # field / formula / const
-    copperField: Phone
+    copperField: Phone.Number
 
   - netsuiteId: cseg_lead_source_
     type: text

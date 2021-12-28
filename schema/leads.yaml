@@ -102,6 +102,6 @@ leads:
   - netsuiteId: custpage_lsa_vis
     type: text
     fieldSource: field # field / formula / const
-    copperField: last.contacted
+    copperField: Last.Contacted
     
     

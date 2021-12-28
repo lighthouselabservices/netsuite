@@ -24,7 +24,7 @@ leads:
   - netsuiteId: entity status
     type: text
     fieldSource: field # field / formula / const
-    copperField: todo
+    copperField: Status
     allowedValues:
       - New
       - Contact Attempted

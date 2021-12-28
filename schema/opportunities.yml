@@ -28,23 +28,22 @@ opportunities:
       - Hospital
       - Other
 
-# ----- (VK) CHANGE STRUCTURE BELOW TO MATCH -----
+  - netsuiteId: Existing_Lines_of_Service 
+    type: text
+    default: Other
+    allowedValues:
+      - None
+      - Blood
+      - Covid
+      - Cytology
+      - General Chemistry
+      - Histology
+      - Microbiology
+      - Molecular
+      - Tox
+      - Other
 
-Existing_Lines_of_Service:
-  netsuiteId: # Netsuite field id
-  type: text
-  default: Other
-  allowedValues:
-    - None
-    - Blood
-    - Covid
-    - Cytology
-    - General Chemistry
-    - Histology
-    - Microbiology
-    - Molecular
-    - Tox
-    - Other
+# ----- (VK) CHANGE STRUCTURE BELOW TO MATCH -----
 
   netsuiteId: leadsource
   type: text

@@ -4,7 +4,7 @@ leads:
   - netsuiteId: salutation
     type: text
     fieldSource: field # field / formula / const
-    copperField: prefix
+    copperField: Prefix
 
   - netsuiteId: template # field id of netsuite
     type: firstname

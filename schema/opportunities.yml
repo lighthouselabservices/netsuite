@@ -99,8 +99,8 @@ opportunities:
 
   - netsuiteId: leadsource
     type: text
-    fieldSource: field # field / formula / const
     copperField: Source
+    fieldSource: field # field / formula / const
     allowedValues:
       - No Source
       - Webform - Lighthouse

@@ -6,46 +6,118 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: prefix
 
-  - netsuiteId: Stage_Name
-    type: text
-    default: Qualification
-    allowedValues:
-      - Contract Sent
-      - Lost
-      - Needs Analysis
-      - Negotiation
-      - Proposal Approved
-      - Proposal Sent
-      - Purgatory
-      - Qualification
-      - Won/Closed
-
-  - netsuiteId: Lab_Type
-    type: text
-    allowedValues:
-      - Reference
-      - POL
-      - Hospital
-      - Other
-
-  - netsuiteId: Existing_Lines_of_Service 
-    type: text
-    default: Other
-    allowedValues:
-      - None
-      - Blood
-      - Covid
-      - Cytology
-      - General Chemistry
-      - Histology
-      - Microbiology
-      - Molecular
-      - Tox
-      - Other
-
 # ----- (VK) CHANGE STRUCTURE BELOW TO MATCH -----
+- netsuiteId: entity
+  type: text
+  fieldSource: field # field / formula / const
+  copperField: Company
+    
+- netsuiteId: expectedclosedate
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Close.Date
 
-  netsuiteId: leadsource
+- netsuiteId: Title
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Name
+  
+ - netsuiteId: entitystatus
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Status
+  allowedValues:
+    - Won
+    - Abandoned
+    - Lost
+
+- netsuiteId: winlossreason
+  type: text
+  fieldSource: field # field / formula / const
+  copperField: Loss Reason
+  allowedValues:
+      - Open Opp
+      - No Loss Reason
+      - Price
+      - Features
+      - Competitor
+      - Lack of Budget
+      
+- netsuiteId: probability
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Win.Probability
+  
+- netsuiteId: memo
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Webform Info cf_266912
+  
+- netsuiteId: custbody4
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Profit.(est first year).cf_483313    
+  
+- netsuiteId: projectedtotal
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Value
+
+- netsuiteId: custbody_esc_last_modified_date
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Updated.At
+
+- netsuiteId: custbody3
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Type.of.Testing.cf_411227
+   allowedValues:
+    - Blood
+    - Cannabis
+    - Covid
+    - Cytology
+    - General Chemistries
+    - Histology
+    - Microbiology
+    - Molecular
+    - Other
+    - Tox
+    
+- netsuiteId: custpage_lsa_vis
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Last.Contacted
+  
+- netsuiteId: custbody_esc_created_date
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Created.At
+
+- netsuiteId: custbody_esc_last_modified_date
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Updated.At
+    
+- netsuiteId: location
+  type: text
+  fieldSource: field # field / formula / const
+  defaultValue: 
+  copperField: Location.(city,.state).cf_418541
+  
+- netsuiteId: leadsource
   type: text
   fieldSource: field # field / formula / const
   defaultValue: 
@@ -76,141 +148,10 @@ opportunities:
     - Webform - Lighthouse (Covid)
     - Outbound Sales Team
     - Webform - Beaconlis
-
-Priority:
-  netsuiteId: # Netsuite field id
-  type: text
-  default: None
-  allowedValues:
-    - None
-    - Low
-    - Medium
-    - High
-    
-    
-    
-  netsuiteId: entity
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Company
   
-  netsuiteId: expectedclosedate
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Close Date
-  
-  netsuiteId: entity
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Company
-  
-  netsuiteId: entitystatus
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Status
-  allowedValues:
-    - Won
-    - Abandoned
-    - Lost
-    - Open
-  
-  
-  netsuiteId: winlossreason
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Loss Reason
-  allowedValues:
-      - No Loss Reason
-      - Price
-      - Features
-      - Competitor
-      - Lack of Budget
-  
-  netsuiteId: probability
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Win Probability
-  
-  netsuiteId: memo
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Webform Info cf_266912
-  
-  netsuiteId: custbody4
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Profit (est first year) cf_483313
 
   
-  netsuiteId: projectedtotal
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Value
   
-  netsuiteId: location
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Location (city, state) cf_418541
-  
-  netsuiteId: custbody_esc_last_modified_date
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Updated At
-  
-  netsuiteId: custbody3
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Type of Testing cf_411227
-   allowedValues:
-    - Blood
-    - Cannabis
-    - Covid
-    - Cytology
-    - General Chemistries
-    - Histology
-    - Microbiology
-    - Molecular
-    - Other
-    - Tox
-  
-  
-  netsuiteId: custbody_esc_created_date
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Created At
-  
-  netsuiteId: custpage_lsa_vis
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Updated At
-  
-  netsuiteId: leadsource
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Source
-  
-  
-  netsuiteId: trandate
-  type: text
-  fieldSource: field # field / formula / const
-  defaultValue: 
-  copperField: Created At
-
   
   
       

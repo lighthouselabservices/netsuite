@@ -1,6 +1,6 @@
 ---
 opportunities:
-  - netsuiteId: Value
+ - netsuiteId: Value
     type: number
     default: 1000
     fieldSource: field # field / formula / const
@@ -23,7 +23,7 @@ opportunities:
   defaultValue: 
   copperField: Name
   
- - netsuiteId: entitystatus
+- netsuiteId: entitystatus
   type: text
   fieldSource: field # field / formula / const
   defaultValue: 

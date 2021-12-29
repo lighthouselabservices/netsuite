@@ -25,7 +25,7 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
 
     # field not found
     if (is.null(res_dt[[fld_id]])) {
-       res_dt[[fld_id]] <- "?"
+       res_dt[[fld_id]] <- "???"
       next
       }
 

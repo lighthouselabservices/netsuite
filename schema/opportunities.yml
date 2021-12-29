@@ -1,143 +1,131 @@
 ---
 opportunities:
- - netsuiteId: entity
-   type: text
-   fieldSource: field # field / formula / const
-   copperField: Company
-    
- - netsuiteId: expectedclosedate
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Close.Date
+  - netsuiteId: entity
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Company
 
- - netsuiteId: Title
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Name
-  
- - netsuiteId: entitystatus
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Status
-   allowedValues:
-     - Won
-     - Abandoned
-     - Lost
+  - netsuiteId: expectedclosedate
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Close.Date
 
- - netsuiteId: winlossreason
-   type: text
-   fieldSource: field # field / formula / const
-   copperField: Loss.Reason
-   allowedValues:
+  - netsuiteId: Title
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Name
+
+  - netsuiteId: entitystatus
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Status
+    allowedValues:
+      - Won
+      - Abandoned
+      - Lost
+
+  - netsuiteId: winlossreason
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Loss.Reason
+    allowedValues:
       - Open Opp
       - No Loss Reason
       - Price
       - Features
       - Competitor
       - Lack of Budget
-      
- - netsuiteId: probability
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Win.Probability
-  
- - netsuiteId: memo
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Webform.Info.cf_266912
-  
- - netsuiteId: custbody4
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Profit  
-  
- - netsuiteId: projectedtotal
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Value
 
- - netsuiteId: custbody_esc_last_modified_date
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Updated.At
+  - netsuiteId: probability
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Win.Probability
 
- - netsuiteId: custbody3
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Type.of.Testing.cf_411227
-   allowedValues:
-    - Blood
-    - Cannabis
-    - Covid
-    - Cytology
-    - General Chemistries
-    - Histology
-    - Microbiology
-    - Molecular
-    - Other
-    - Tox
-    
- - netsuiteId: custpage_lsa_vis
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Last.Contacted
-  
- - netsuiteId: custbody_esc_created_date
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Created.At
+  - netsuiteId: memo
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Webform.Info.cf_266912
 
- - netsuiteId: custbody_esc_last_modified_date
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Updated.At
-    
- - netsuiteId: location
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Location
-  
- - netsuiteId: leadsource
-   type: text
-   fieldSource: field # field / formula / const
-   defaultValue: 
-   copperField: Source
-     - No Source
-     - Webform - Lighthouse
-     - Webform - Elite
-     - Webform - Lighthouse (PTLD)
-     - Webform - Lighthouse (Recruiting)
-     - Webform (Lighthouse - General Inquiry)
-     - Phone Lead - Lighthouse
-     - Phone Lead - Elite
-     - Employee Referral
-     - Client Referral
-     - Medline Referral
-     - Vendor Referral
-     - Existing Client
-     - LinkedIn
-     - Lighthouse
-     - Other
-     - Webinar
-     - Advertising
-     - Trade Show
-     - Cold Call
-     - Email - Lighthouse
-     - Newsletter Lead
-     - Distributor Form - Elite
-     - Webform - Lighthouse (Covid)
-     - Outbound Sales Team
-     - Webform - Beaconlis
+  - netsuiteId: custbody4
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Profit
+
+  - netsuiteId: projectedtotal
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Value
+
+  - netsuiteId: custbody_esc_last_modified_date
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Updated.At
+
+  - netsuiteId: custbody3
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Type.of.Testing.cf_411227
+    allowedValues:
+      - Blood
+      - Cannabis
+      - Covid
+      - Cytology
+      - General Chemistries
+      - Histology
+      - Microbiology
+      - Molecular
+      - Other
+      - Tox
+
+  - netsuiteId: custpage_lsa_vis
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Last.Contacted
+
+  - netsuiteId: custbody_esc_created_date
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Created.At
+
+  - netsuiteId: custbody_esc_last_modified_date
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Updated.At
+
+  - netsuiteId: location
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Location
+
+  - netsuiteId: leadsource
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Source
+    allowedValues:
+      - Source
+      - No Source
+      - Webform - Lighthouse
+      - Webform - Elite
+      - Webform - Lighthouse (PTLD)
+      - Webform - Lighthouse (Recruiting)
+      - Webform (Lighthouse - General Inquiry)
+      - Phone Lead - Lighthouse
+      - Phone Lead - Elite
+      - Employee Referral
+      - Client Referral
+      - Medline Referral
+      - Vendor Referral
+      - Existing Client
+      - LinkedIn
+      - Lighthouse
+      - Other
+      - Webinar
+      - Advertising
+      - Trade Show
+      - Cold Call
+      - Email - Lighthouse
+      - Newsletter Lead
+      - Distributor Form - Elite
+      - Webform - Lighthouse (Covid)
+      - Outbound Sales Team
+      - Webform - Beaconlis

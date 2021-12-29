@@ -52,7 +52,7 @@ opportunities:
    copperField: Webform.Info.cf_266912
   
  - netsuiteId: custbody4
-   type: text
+   type: number
    fieldSource: field # field / formula / const
    defaultValue: 
    copperField: Profit.(est.first,year).cf_483313    
@@ -108,13 +108,13 @@ opportunities:
    type: text
    fieldSource: field # field / formula / const
    defaultValue: 
-   copperField: Location.(city,.state).cf_418541
+   copperField: Location.,city,,state),cf_418541
   
  - netsuiteId: leadsource
    type: text
    fieldSource: field # field / formula / const
    defaultValue: 
-   copperField: Source.(Person).cf_442249
+   copperField: Source,(Person),cf_442249
      - No Source
      - Webform - Lighthouse
      - Webform - Elite

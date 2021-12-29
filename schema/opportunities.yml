@@ -114,7 +114,7 @@ opportunities:
    type: text
    fieldSource: field # field / formula / const
    defaultValue: 
-   copperField: Source
+   copperField: Source.(Person).cf_442249
      - No Source
      - Webform - Lighthouse
      - Webform - Elite

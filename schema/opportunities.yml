@@ -5,8 +5,7 @@ opportunities:
     default: 1000
     fieldSource: field # field / formula / const
     copperField: prefix
-
-# ----- (VK) CHANGE STRUCTURE BELOW TO MATCH -----
+    
 - netsuiteId: entity
   type: text
   fieldSource: field # field / formula / const

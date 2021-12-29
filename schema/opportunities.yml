@@ -102,7 +102,6 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: Source
     allowedValues:
-      - Source
       - No Source
       - Webform - Lighthouse
       - Webform - Elite

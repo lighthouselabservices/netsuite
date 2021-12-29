@@ -30,7 +30,7 @@ opportunities:
  - netsuiteId: winlossreason
    type: text
    fieldSource: field # field / formula / const
-   copperField: Loss Reason
+   copperField: Loss.Reason
    allowedValues:
       - Open Opp
       - No Loss Reason
@@ -141,4 +141,3 @@ opportunities:
     - Webform - Lighthouse (Covid)
     - Outbound Sales Team
     - Webform - Beaconlis
-    

@@ -108,5 +108,7 @@ leads:
     type: text
     fieldSource: const # field / formula / const
     default: "Y"
+
+# additional options for post processing scripts
 options:
   nameDefault: 'unknown'

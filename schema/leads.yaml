@@ -108,7 +108,12 @@ leads:
     type: text
     fieldSource: const # field / formula / const
     default: "Y"
-
+    
+  - netsuiteId: salesrep
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Owned.By  
+   
 # additional options for post processing scripts
 options:
   nameDefault: 'Unknown'

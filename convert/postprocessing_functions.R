@@ -10,6 +10,7 @@ Leads <- function(res_dt, conf_opt = NULL){
   res_dt[companyname != '', Individual := 'N']
   
   # fill individual last name and first name
+  if(is.null(conf_opt)) return(res_dt)
   name_replace = conf_opt$nameDefault
   if(is.null(name_replace)) return(res_dt)
     

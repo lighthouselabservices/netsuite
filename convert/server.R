@@ -71,7 +71,13 @@ shinyServer(function(input, output, session) {
     dt_in <- req(rvals$dt_in)
     conf <- req(config())
 
-    dt_out <- ConvertFields(dt_in, conf)
+    dt_out <- ConvertFields(dt_in, conf$conf)
+    
+    # do post processing
+    if(exists(input$type)){
+    PostProcess <- get(input$type)
+    dt_out = PostProcess(dt_out, conf$conf_opt)
+    }
 
     return(dt_out)
   })
@@ -79,7 +85,7 @@ shinyServer(function(input, output, session) {
   output$dt_output <- renderDT({
     dt_out <- req(dt_out())
 
-    # make datatable
+    # make data table
     dat_view <- DT::datatable(dt_out,
       rownames = FALSE, style = "default", class = "display compact", selection = "single", filter = "top",
       options = list(dom = "ipft", deferRender = TRUE, width = "100%", pageLength = 20)

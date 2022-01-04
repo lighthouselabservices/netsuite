@@ -111,4 +111,4 @@ leads:
 
 # additional options for post processing scripts
 options:
-  nameDefault: 'unknown'
+  nameDefault: 'Unknown'

@@ -114,7 +114,7 @@ shinyUI(bs4DashPage(
         type = "tabs",
         collapsible = F,
         tabPanel(
-          title = "Conversion Config",
+          title = "Config",
           div(jsoneditOutput("conf", width = "100%", height = "600px"))
         ),
         tabPanel(

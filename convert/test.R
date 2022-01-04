@@ -19,7 +19,7 @@ conf_opt = conf_all$options
 
 res_dt <- ConvertFields(dt_in = dt_in, conf = conf)
 
-# post procesing functions
+# post processing functions
 
 PostProcess <- get(conversion_type)
 

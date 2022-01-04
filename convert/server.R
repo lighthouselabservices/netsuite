@@ -76,7 +76,7 @@ shinyServer(function(input, output, session) {
     # do post processing
     if(exists(input$type)){
     PostProcess <- get(input$type)
-    dt_out = PostProcess(dt_out, conf$conf_opt)
+    dt_out = PostProcess(dt_out, conf$options)
     }
 
     return(dt_out)

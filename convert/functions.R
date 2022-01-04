@@ -19,6 +19,12 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
 
     # get net suite field id
     fld_id <- fld$netsuiteId
+    
+    # field value is constant
+    if (fld$fieldSource == "const"){
+      res_dt[[fld_id]] <- fld$default
+      next
+    }
 
     # create net suite field from copper source field
     if (fld$fieldSource == "field") res_dt[[fld_id]] <- dt_in[[fld$copperField]]

@@ -10,7 +10,7 @@ leads:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: First.Name
-    
+
   - netsuiteId: Last Name # field id of netsuite
     type: firstname
     fieldSource: field # field / formula / const
@@ -98,10 +98,13 @@ leads:
       - Webform - Lighthouse (Covid)
       - Outbound Sales Team
       - Webform - Beaconlis
-      
+
   - netsuiteId: custpage_lsa_vis
     type: text
     fieldSource: field # field / formula / const
     copperField: Last.Contacted
-    
-    
+
+  - netsuiteId: Individual
+    type: text
+    fieldSource: const # field / formula / const
+    default: "Y"

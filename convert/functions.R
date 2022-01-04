@@ -92,8 +92,15 @@ GetConfig <- function(schema_yaml = NULL) {
   }
 
   listviewer::jsonedit(conf_yaml)
+  
+  # field config
   conf <- conf_yaml[[1]]
   listviewer::jsonedit(conf)
+  
+  #processing options
+  opt <- conf_yaml[['options']]
+  
+  res = list(conf = conf, options = opt)
 
-  return(conf)
+  return(res)
 }

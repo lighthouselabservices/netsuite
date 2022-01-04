@@ -15,6 +15,7 @@ leads:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Last.Name
+    Default: 'Unknown'
 
   - netsuiteId: title
     type: text

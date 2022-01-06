@@ -15,7 +15,7 @@ leads:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Last.Name
-    Default: 'Unknown'
+    Default: "Unknown"
 
   - netsuiteId: title
     type: text
@@ -109,15 +109,14 @@ leads:
     type: text
     fieldSource: const # field / formula / const
     default: "Y"
-    
+
   - netsuiteId: salesrep
     type: text
     fieldSource: field # field / formula / const
-    copperField: Owned.By  
-   
+    copperField: Owned.By
+
 # additional options for post processing scripts
 options:
-  nameDefault: 'Unknown'
+  nameDefault: "Unknown"
   sourcePrefix: "Leads-"
-  idLenght: 25
-
+  idLength: 25

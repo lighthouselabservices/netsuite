@@ -119,3 +119,4 @@ leads:
 options:
   nameDefault: 'Unknown'
   sourcePrefix: "Leads-"
+  idLenght: 25

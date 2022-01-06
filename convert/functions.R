@@ -37,7 +37,7 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
 
     # convert if text
     if (fld$type == "text") {
-      res_dt[[fld_id]] <- as.character(res_dt[[fld_id]]) |> str_squish()
+      res_dt[[fld_id]] <- as.character(res_dt[[fld_id]]) %>% str_squish()
       
     } 
     

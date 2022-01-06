@@ -46,9 +46,9 @@ Leads <- function(res_dt, conf_opt = NULL){
   
   # add unique id
   unique_id_len = conf_opt$idLenght
-  res_dt[,uniqueId := paste0(`first Name`, `Last Name`, companyname)|> str_squish()  ]
+  res_dt[,uniqueId := paste0(`first Name`, `Last Name`, companyname)%>% str_squish()  ]
 
-  res_dt$uniqueId <- sapply( res_dt$uniqueId, function(x){charToRaw(x) |> as.character() |> paste0(collapse = '') |> str_sub(1, unique_id_len)  }, USE.NAMES = F    )
+  res_dt$uniqueId <- sapply( res_dt$uniqueId, function(x){charToRaw(x) %>% as.character() %>% paste0(collapse = '') %>% str_sub(1, unique_id_len)  }, USE.NAMES = F    )
   
   res_dt = unique(res_dt, by = "uniqueId")
   

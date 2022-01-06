@@ -24,3 +24,11 @@ res_dt <- ConvertFields(dt_in = dt_in, conf = conf)
 PostProcess <- get(conversion_type)
 
 res = PostProcess(res_dt, conf_opt)
+
+anyDuplicated(res$uniqueId)
+
+# res = setorder(res, uniqueId)
+# 
+# res[, ind := cumsum(.N), by=uniqueId]
+# 
+# dups= res[ind>1, .(`first Name`, `Last Name`, companyname)]

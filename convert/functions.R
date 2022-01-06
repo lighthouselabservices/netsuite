@@ -35,8 +35,13 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
       next
       }
 
-    # convert to final format
-    if (fld$type == "text") res_dt[[fld_id]] <- as.character(res_dt[[fld_id]])
+    # convert if text
+    if (fld$type == "text") {
+      res_dt[[fld_id]] <- as.character(res_dt[[fld_id]]) |> str_squish()
+      
+    } 
+    
+  
 
     # check for allowed values
     allowed_values <- fld$allowedValues
@@ -54,6 +59,8 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
     
     # check replacements
     stopifnot(all(res_dt[[fld_id]] %chin% allowed_values))
+    
+
     
   }
 

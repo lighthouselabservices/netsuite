@@ -71,9 +71,12 @@ shinyServer(function(input, output, session) {
     dt_in <- req(rvals$dt_in)
     conf <- req(config())
 
+    # convert input fields by config
+    
     dt_out <- ConvertFields(dt_in, conf$conf)
     
-    # do post processing
+    # post processing for input type if available
+    
     if(exists(input$type)){
     PostProcess <- get(input$type)
     dt_out = PostProcess(dt_out, conf$options)

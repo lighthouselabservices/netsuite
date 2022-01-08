@@ -1,0 +1,5 @@
+contacts:
+  - netsuiteId: entity
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Company

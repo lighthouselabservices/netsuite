@@ -1,5 +1,6 @@
+# Mapping sales contacts in Netsuite from Copper CRM
 contacts:
-  - netsuiteId: entity
+  - netsuiteId: companyname
     type: text
     fieldSource: field # field / formula / const
     copperField: Company

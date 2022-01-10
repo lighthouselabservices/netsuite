@@ -1,0 +1,122 @@
+---
+# Mapping sales contacts from Copper CRM to Netsuite
+leads:
+  - netsuiteId: salutation
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Prefix
+
+  - netsuiteId: first Name # field id of netsuite
+    type: firstname
+    fieldSource: field # field / formula / const
+    copperField: First.Name
+
+  - netsuiteId: Last Name # field id of netsuite
+    type: firstname
+    fieldSource: field # field / formula / const
+    copperField: Last.Name
+    Default: "Unknown"
+
+  - netsuiteId: title
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Title
+
+  - netsuiteId: companyname
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Account
+
+  - netsuiteId: entity status
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Status
+    allowedValues:
+      - New
+      - Contact Attempted
+      - Need Analysis
+      - Unqualified
+      - Junk
+      - Job Seeker
+      - Purgatory
+
+  - netsuiteId: category
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Division.of.Interest.cf_267162
+    default: General Inquiry
+    allowedValues:
+      - Consulting/Lab Startup
+      - Lab Director
+      - Recruiting
+      - Covid 19 Consulting
+      - Beacon LIS
+      - RCM
+      - General Inquiry
+
+  - netsuiteId: comments
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Webform.Info.cf_266912
+
+  - netsuiteId: email
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Email
+
+  - netsuiteId: phone
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Phone.Number
+
+  - netsuiteId: leadsource
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Source
+    allowedValues:
+      - Webform - Lighthouse
+      - Webform - Elite
+      - Webform - Lighthouse (PTLD)
+      - Webform - Lighthouse (Recruiting)
+      - Webform - (Lighthouse - General Inquiry)
+      - Phone Lead - Lighthouse
+      - Phone Lead - Elite
+      - Employee Referral
+      - Client Referral
+      - Medline Referral
+      - Vendor Referral
+      - Existing Client
+      - LinkedIn
+      - Lighthouse
+      - Other
+      - Webinar
+      - Advertising
+      - Trade Show
+      - Cold Call
+      - Email - Lighthouse
+      - Newsletter Lead
+      - Distributor Form - Elite
+      - Webform - Lighthouse (Covid)
+      - Outbound Sales Team
+      - Webform - Beaconlis
+
+  - netsuiteId: custpage_lsa_vis
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Last.Contacted
+
+  - netsuiteId: Individual
+    type: text
+    fieldSource: const # field / formula / const
+    default: "Y"
+
+  - netsuiteId: salesrep
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Owned.By
+
+# additional options for post processing scripts
+options:
+  nameDefault: "Unknown"
+  sourcePrefix: "Leads-"
+  idLength: 25

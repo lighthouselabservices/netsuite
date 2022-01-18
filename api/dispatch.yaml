@@ -1,0 +1,9 @@
+# mapping domain / subdomain routes to specific services
+# DEPLOY: gcloud app deploy dispatch.yaml
+# https://cloud.google.com/appengine/docs/standard/nodejs/reference/dispatch-yaml
+#
+
+# send payer prediction request to predict-payer service
+dispatch:
+  - url: "service.paypredict.net/*"
+    service: api-service

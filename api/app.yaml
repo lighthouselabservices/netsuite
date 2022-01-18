@@ -1,0 +1,4 @@
+#to deploy run > gcloud app deploy
+runtime: nodejs12
+service: api-service
+instance_class: F1

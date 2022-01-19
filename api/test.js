@@ -1,6 +1,12 @@
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 
+// references
+// https://stackoverflow.com/questions/56398985/oauth1-0-header-in-node-js
+// https://www.npmjs.com/package/oauth-1.0a
+// https://help.akana.com/content/current/cm/api_oauth/aaref/Ref_OAuth_AuthorizationHeader_10a.htm
+
+
 const api = require('./plugins/createLead.js');
 
 // config for createing lead

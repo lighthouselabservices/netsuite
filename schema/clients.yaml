@@ -1,6 +1,6 @@
 ---
 # Mapping sales prospects from Copper CRM to Netsuite
-leads:
+clients:
   - netsuiteId: salutation
     type: text
     fieldSource: field # field / formula / const
@@ -21,6 +21,11 @@ leads:
     type: text
     fieldSource: field # field / formula / const
     copperField: Title
+    
+  - netsuiteId: url
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Website
 
   - netsuiteId: companyname
     type: text
@@ -58,6 +63,11 @@ leads:
     type: text
     fieldSource: field # field / formula / const
     copperField: Webform.Info.cf_266912
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Address
 
   - netsuiteId: email
     type: text
@@ -68,6 +78,11 @@ leads:
     type: text
     fieldSource: field # field / formula / const
     copperField: Phone.Number
+    
+  - netsuiteId: fax
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Fax
 
   - netsuiteId: leadsource
     type: text
@@ -99,6 +114,7 @@ leads:
       - Webform - Lighthouse (Covid)
       - Outbound Sales Team
       - Webform - Beaconlis
+      - Webform - Alt Assessment Program
 
   - netsuiteId: custpage_lsa_vis
     type: text

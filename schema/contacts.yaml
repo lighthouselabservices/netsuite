@@ -99,6 +99,7 @@ leads:
       - Webform - Lighthouse (Covid)
       - Outbound Sales Team
       - Webform - Beaconlis
+      - Webform - Alt Assessment Program
 
   - netsuiteId: custpage_lsa_vis
     type: text

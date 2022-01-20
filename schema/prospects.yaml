@@ -10,6 +10,23 @@ prospects:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Status
+    
+    
+  - netsuiteId: first Name # field id of netsuite
+    type: firstname
+    fieldSource: field # field / formula / const
+    copperField: First.Name
+
+  - netsuiteId: Last Name # field id of netsuite
+    type: firstname
+    fieldSource: field # field / formula / const
+    copperField: Last.Name
+    Default: "Unknown"
+    
+  - netsuiteId: Middle Name # field id of netsuite
+    type: middlename
+    fieldSource: field # field / formula / const
+    copperField: Middle.Name
 
   - netsuiteId: category
     type: firstname

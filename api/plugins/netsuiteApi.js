@@ -4,6 +4,7 @@
 
 const NsApiWrapper = require('netsuite-rest');
 
+// TODO: get config from google bucket
 const config = require('../config.js');
 
 // Auth 1.0 Wrapper for Netsuite

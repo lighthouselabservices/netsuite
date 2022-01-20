@@ -1,4 +1,4 @@
-// TODO: get config from google bucket (temp)
+// TODO: get config from google bucket (temp) / remove later
 const config = {
     consumer_key:
       '4a03f7d35834eea6cd0d0c71d7516b96a15da3f535db53bbb064b6ccef7fa7ac',

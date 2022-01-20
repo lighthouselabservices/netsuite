@@ -16,6 +16,11 @@ leads:
     fieldSource: field # field / formula / const
     copperField: Last.Name
     Default: "Unknown"
+    
+  - netsuiteId: Middle Name # field id of netsuite
+    type: middlename
+    fieldSource: field # field / formula / const
+    copperField: Middle.Name
 
   - netsuiteId: title
     type: text

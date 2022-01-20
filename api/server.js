@@ -1,12 +1,12 @@
-// Express JS service for processing AI requests 
+// Express JS service for processing AI requests
 // https://cloud.google.com/appengine/docs/standard/nodejs/building-app/writing-web-service
 
 const express = require('express');
 const app = express();
 
 // plugins
-const gcs = require('./plugins/getfiles.server');
-const api = require('./plugins/netsuiteApi')
+// const gcs = require('./plugins/getfiles.server');
+// const api = require('./plugins/netsuiteApi');
 
 app.use(function (req, res, next) {
   // allow requests from any domain
@@ -25,13 +25,26 @@ app.get('/', (req, res) => {
   );
 });
 
-app.post('/v1/create-customer/', async (req, res) => {
-
+app.get('/v1/create-customer/', async (req, res) => {
   // get config first
-  let config = null;
-  if (!config) {
-    config = await gcs.GetFile('pp-req-ml-config', 'ml-config-payer.json');
-  }
+  // let config = null;
+  // if (!config) {
+  //   config = await gcs.GetFile('pp-req-ml-config', 'ml-config-payer.json');
+  // }
+  res.send(
+    `this is a placeholder for POST `,
+  );
+});
+
+app.post('/v1/create-customer/', async (req, res) => {
+  // get config first
+  // let config = null;
+  // if (!config) {
+  //   config = await gcs.GetFile('pp-req-ml-config', 'ml-config-payer.json');
+  // }
+  res.send(
+    `this is a placeholder for POST `,
+  );
 });
 
 // Listen to the App Engine-specified port, or 8080 otherwise

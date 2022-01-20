@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 // make prediction call to Google AI
 // predict insurance payer from member id
 // https://cloud.google.com/ai-platform-unified/docs/start/client-libraries
@@ -5,7 +6,7 @@
 // https://cloud.google.com/ai-platform-unified/docs/reference/rpc
 
 // google auth
-//https://github.com/googleapis/google-auth-library-nodejs#choosing-the-correct-credential-type-automatically
+// https://github.com/googleapis/google-auth-library-nodejs#choosing-the-correct-credential-type-automatically
 
 'use strict';
 
@@ -18,7 +19,7 @@ async function getGoogleAuthToken() {
     scopes: 'https://www.googleapis.com/auth/cloud-platform',
   });
   const client = await auth.getClient();
-  //console.log(client);
+  // console.log(client);
 
   const tokenObj = await client.getAccessToken();
   return tokenObj.token;
@@ -79,7 +80,7 @@ async function makeRequest(
   memberId = '',
   endpointId = '5018593281634729984',
   project = 'pp-req',
-  location = 'us-central1'
+  location = 'us-central1',
 ) {
   // get features
   const features = makeFeatures2(memberId);
@@ -92,7 +93,7 @@ async function makeRequest(
     instances,
   };
 
-  //const request = require("../data/test-request.json");
+  // const request = require("../data/test-request.json");
 
   // console.log(JSON.stringify(request, null, "\t"));
 
@@ -106,7 +107,7 @@ async function makeRequest(
   // predict request
   const response = await axios.post(
     `https://us-central1-prediction-aiplatform.googleapis.com/v1alpha1/projects/${project}/locations/${location}/endpoints/${endpointId}:explain`,
-    request
+    request,
   );
 
   // console.log(JSON.stringify(response.data, null, "\t"));

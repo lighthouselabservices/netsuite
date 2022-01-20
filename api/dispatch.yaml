@@ -5,5 +5,5 @@
 
 # send payer prediction request to predict-payer service
 dispatch:
-  - url: "service.paypredict.net/*"
+  - url: "api.lighthouselabservices.com/*"
     service: api-service

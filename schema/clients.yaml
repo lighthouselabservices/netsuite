@@ -16,7 +16,12 @@ clients:
     fieldSource: field # field / formula / const
     copperField: Last.Name
     Default: "Unknown"
-
+    
+  - netsuiteId: Middle Name # field id of netsuite
+    type: middlename
+    fieldSource: field # field / formula / const
+    copperField: Middle.Name
+    
   - netsuiteId: title
     type: text
     fieldSource: field # field / formula / const
@@ -130,6 +135,11 @@ clients:
     type: text
     fieldSource: field # field / formula / const
     copperField: Owned.By
+    
+  - netsuiteId: comments
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Webform,Info.cf_266912
 
 # additional options for post processing scripts
 options:

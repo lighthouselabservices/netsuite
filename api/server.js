@@ -2,15 +2,19 @@
 // https://cloud.google.com/appengine/docs/standard/nodejs/building-app/writing-web-service
 
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 
 // plugins
 // const gcs = require('./plugins/getfiles.server');
-// const api = require('./plugins/netsuiteApi');
+const api = require('./plugins/netsuiteApi');
 
+// use body parser for JSON body
+app.use(bodyParser.json());
+
+// allow requests from different domains to the service
 app.use(function (req, res, next) {
-  // allow requests from any domain
-  res.header('Access-Control-Allow-Origin', '*'); // update to match the domain you will make the request from
+  res.header('Access-Control-Allow-Origin', '*'); // allow requests from any domain
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept',
@@ -25,25 +29,39 @@ app.get('/', (req, res) => {
   );
 });
 
-app.get('/v1/create-customer/', async (req, res) => {
-  // get config first
-  // let config = null;
-  // if (!config) {
-  //   config = await gcs.GetFile('pp-req-ml-config', 'ml-config-payer.json');
-  // }
-  res.send(
-    `this is a placeholder for POST `,
-  );
-});
-
+// Create lead in Netsuite via REST API
 app.post('/v1/create-customer/', async (req, res) => {
   // get config first
   // let config = null;
   // if (!config) {
   //   config = await gcs.GetFile('pp-req-ml-config', 'ml-config-payer.json');
   // }
+
+  // get lead object from POST request
+  const lead = req.body;
+
+  // console.log(lead);
+
+  // object in the body does pass test return error
+  if ( Object.keys(lead).length === 0) {
+    res.send(
+      `Error, Request body is invalid:  ${JSON.stringify(lead)} `,
+    );
+  }
+
+  // create lead in Netsuite using data from request body
+  const resp = await api.createCustomer(lead);
+
+// in case of error return full response
+if (resp.statusCode != 204) {
   res.send(
-    `this is a placeholder for POST `,
+    resp,
+  );
+}
+
+// return result
+  res.send(
+    `LEAD CREATED: ${lead.companyName} `,
   );
 });
 

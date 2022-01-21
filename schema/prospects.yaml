@@ -43,6 +43,11 @@ prospects:
     fieldSource: field # field / formula / const
     copperField: email
     
+  - netsuiteId: altemail
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Email.2
+    
   - netsuiteId: phone
     type: text
     fieldSource: field # field / formula / const

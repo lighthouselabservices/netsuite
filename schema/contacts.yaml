@@ -68,6 +68,11 @@ leads:
     type: text
     fieldSource: field # field / formula / const
     copperField: Email
+    
+  - netsuiteId: altemail
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Email.2
 
   - netsuiteId: phone
     type: text

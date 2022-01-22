@@ -13,7 +13,7 @@ const api = require('./plugins/netsuiteApi');
 app.use(bodyParser.json());
 
 // allow requests from different domains to the service
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // allow requests from any domain
   res.header(
     'Access-Control-Allow-Headers',
@@ -59,9 +59,21 @@ if (resp.statusCode != 204) {
   );
 }
 
+
 // return result
   res.send(
     `LEAD CREATED: ${lead.companyName} `,
+  );
+});
+
+// Echo service for testing POST requests
+app.post('/v1/post-echo/', async (req, res) => {
+  // get content object from POST request
+  const content = req.body;
+
+// return content back
+  res.send(
+    (content),
   );
 });
 

@@ -13,7 +13,8 @@
   "dependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
-    "netsuite-rest": "^1.0.7"
+    "netsuite-rest": "^1.0.7",
+    "request": "^2.88.2"
   },
   "author": "Lighthouse Lab Services",
   "license": "ISC"

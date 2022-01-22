@@ -33,7 +33,13 @@ async function createCustomerPubSub(message, context) {
 	// create lead in Netsuite using data from request body
 	const res = await api.createCustomer(lead);
 
-	console.log(res);
+	// in case of error return full response
+	if (res.statusCode === 204) {
+		console.log(`LEAD CREATED: ${lead.companyName} `);
+	}else{
+		console.warn(res);
+	}
+  
 }
 
 module.exports = { createCustomerPubSub };

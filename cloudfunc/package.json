@@ -1,0 +1,20 @@
+{
+  "name": "netsuite-cloud-functions",
+  "version": "1.0.0",
+  "description": "Cloud functions for NetSuite API",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "keywords": [
+    "netsuite"
+  ],
+  "author": "Vitali Khvatkov",
+  "license": "ISC",
+  "dependencies": {
+    "netsuite-rest": "^1.0.8"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0"
+  }
+}

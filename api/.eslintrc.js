@@ -19,5 +19,6 @@ module.exports = {
     'linebreak-style': 'off',
     'max-len': 'off',
     'new-cap': 'off',
+    'spaced-comment': ['error', 'always', { 'exceptions': ['-', '+'] }],
   },
 };

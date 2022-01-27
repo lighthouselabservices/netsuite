@@ -10,8 +10,7 @@ prospects:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Status
-    
-    
+        
   - netsuiteId: first Name # field id of netsuite
     type: firstname
     fieldSource: field # field / formula / const

@@ -6,18 +6,18 @@ leads:
     fieldSource: field # field / formula / const
     copperField: Prefix
 
-  - netsuiteId: first Name # field id of netsuite
+  - netsuiteId: firstName # field id of netsuite
     type: firstname
     fieldSource: field # field / formula / const
     copperField: First.Name
 
-  - netsuiteId: Last Name # field id of netsuite
+  - netsuiteId: LastName # field id of netsuite
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Last.Name
     Default: "Unknown"
     
-  - netsuiteId: Middle Name # field id of netsuite
+  - netsuiteId: MiddleName # field id of netsuite
     type: middlename
     fieldSource: field # field / formula / const
     copperField: Middle.Name

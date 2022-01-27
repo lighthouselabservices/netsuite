@@ -72,7 +72,22 @@ clients:
   - netsuiteId: defaultaddress
     type: text
     fieldSource: field # field / formula / const
-    copperField: Address
+    copperField: city
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: state
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: postal.code
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: country
 
   - netsuiteId: email
     type: text

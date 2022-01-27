@@ -79,16 +79,31 @@ clients:
     fieldSource: field # field / formula / const
     copperField: Email
 
-  - netsuiteId: phone
+ - netsuiteId: phone
     type: text
     fieldSource: field # field / formula / const
     copperField: Phone.Number
     
+  - netsuiteId: mobilephone
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Phone.Number.2
+    
+  - netsuiteId: homephone
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Phone.Number.3
+    
+  - netsuiteId: altphone
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Phone.Number.4
+    
   - netsuiteId: fax
     type: text
     fieldSource: field # field / formula / const
-    copperField: Fax
-
+    copperField: Phone.Number.5
+    
   - netsuiteId: leadsource
     type: text
     fieldSource: field # field / formula / const

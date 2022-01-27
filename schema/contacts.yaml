@@ -99,7 +99,6 @@ leads:
     fieldSource: field # field / formula / const
     copperField: Phone.Number.5
     
-
   - netsuiteId: leadsource
     type: text
     fieldSource: field # field / formula / const

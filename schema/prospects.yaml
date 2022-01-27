@@ -75,7 +75,22 @@ prospects:
   - netsuiteId: defaultaddress
     type: text
     fieldSource: field # field / formula / const
-    copperField: Address
+    copperField: city
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: state
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: postal.code
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: country
     
   - netsuiteId: cseg_lead_source_
     type: text

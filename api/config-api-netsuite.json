@@ -4,5 +4,5 @@
   "token": "2e4469e18bda6852418248b55322e2a940c2e5a979c2420a666d9d69106bd07e",
   "token_secret": "1c8d045504304508a7893db130732139c4ccdc38409b8d9abc9504fb6c226ffd",
   "realm": "5256042_SB1",
-  "base_url": "https://api.lighthouselabservices.com/"
+  "base_url": "https://5256042-sb1.suitetalk.api.netsuite.com"
 }

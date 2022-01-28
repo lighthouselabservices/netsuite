@@ -93,12 +93,6 @@ leads:
     type: text
     fieldSource: field # field / formula / const
     copperField: Phone.Number.5
-    
-    
-    
-    
-    
-    
 
   - netsuiteId: leadsource
     type: text
@@ -141,6 +135,31 @@ leads:
     type: text
     fieldSource: const # field / formula / const
     default: "Y"
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: street
+ 
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: city
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: state
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: postal.code
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: country
 
   - netsuiteId: salesrep
     type: text

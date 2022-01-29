@@ -9,6 +9,7 @@ const config = {
       '1c8d045504304508a7893db130732139c4ccdc38409b8d9abc9504fb6c226ffd',
     realm: '5256042_SB1',
     base_url: 'https://5256042-sb1.suitetalk.api.netsuite.com',
+    // base_url: 'https://api.lighthouselabservices.com/',
   };
 
   module.exports = config;

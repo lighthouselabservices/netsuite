@@ -29,19 +29,26 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
     # create net suite field from copper source field
     if (fld$fieldSource == "field") res_dt[[fld_id]] <- dt_in[[fld$copperField]]
 
-    # field not found
-    if (is.null(res_dt[[fld_id]])) {
-       res_dt[[fld_id]] <- "?"
-      next
-      }
-
     # convert if text
     if (fld$type == "text") {
       res_dt[[fld_id]] <- as.character(res_dt[[fld_id]]) %>% str_squish()
       
     } 
     
-  
+    # convert if function
+    if (fld$type == "function") {
+      
+      func = get(fld$fieldSource) # get function
+      
+      res_dt[[fld_id]] <- as.character( func(dt_in) ) %>% str_squish()
+      
+    } 
+    
+    # field not found
+    if (is.null(res_dt[[fld_id]])) {
+      res_dt[[fld_id]] <- "?"
+      next
+    }
 
     # check for allowed values
     allowed_values <- fld$allowedValues
@@ -111,3 +118,18 @@ GetConfig <- function(schema_yaml = NULL) {
 
   return(res)
 }
+
+# ---- conversion functions ----
+GetBestPhone = function(dt_in){
+  if(is.null(dt_in$Phone.Number) ) return(NULL)
+  
+  # find best phone number
+  res = dt_in[,.(Phone.Number, Phone.Number.2, Phone.Number.3)]
+  res[Phone.Number == '', Phone.Number := Phone.Number.2]
+  res[Phone.Number == '', Phone.Number := Phone.Number.3]
+  
+  return(res$Phone.Number)
+  
+}
+
+

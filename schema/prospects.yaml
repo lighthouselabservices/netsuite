@@ -10,8 +10,7 @@ prospects:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Status
-    
-    
+        
   - netsuiteId: first Name # field id of netsuite
     type: firstname
     fieldSource: field # field / formula / const
@@ -43,16 +42,31 @@ prospects:
     fieldSource: field # field / formula / const
     copperField: email
     
-  - netsuiteId: phone
+ - netsuiteId: phone
     type: text
     fieldSource: field # field / formula / const
-    copperField: phone
+    copperField: Phone.Number
+    
+  - netsuiteId: mobilephone
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Phone.Number.2
+    
+  - netsuiteId: homephone
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Phone.Number.3
+    
+  - netsuiteId: altphone
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Phone.Number.4
     
   - netsuiteId: fax
     type: text
     fieldSource: field # field / formula / const
-    copperField: fax
-    
+    copperField: Phone.Number.5
+        
   - netsuiteId: comments
     type: text
     fieldSource: field # field / formula / const
@@ -61,7 +75,22 @@ prospects:
   - netsuiteId: defaultaddress
     type: text
     fieldSource: field # field / formula / const
-    copperField: Address
+    copperField: city
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: state
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: postal.code
+    
+  - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: country
     
   - netsuiteId: cseg_lead_source_
     type: text

@@ -70,9 +70,8 @@ leads:
     copperField: Email
 
   - netsuiteId: phone
-    type: text
-    fieldSource: field # field / formula / const
-    copperField: Phone.Number
+    type: function
+    fieldSource: "GetBestPhone"
 
   - netsuiteId: leadsource
     type: text

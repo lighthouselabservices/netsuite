@@ -15,7 +15,6 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: owner
      allowedValues:
-     
     
   - netsuiteId: Title
     type: text

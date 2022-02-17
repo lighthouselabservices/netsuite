@@ -78,11 +78,38 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Opportunity.Type.(JUST ONE).cf_483312
+    allowedValues:
+      - Beacon
+      - CLIA App
+      - Consulting Block
+      - COVID Project
+      - Equipment Sale
+      - ID Project
+      - Lab Project
+      - META
+      - MSA (COVID)
+      - MSA (ID)
+      - MSA (Tox)
+      - PTLD
+      - Supplies
+      - Tox Project
+      - Recruiting
+      - RCM Consulting
+      - Network Contracting
     
   - netsuiteId: custbodyopportunity_type_class
     type: text
     fieldSource: field # field / formula / const
     copperField: Opportunity.Type.Classification.cf_506033
+    allowedValues:
+      - Billing
+      - Consulting
+      - Infectious Disease
+      - Lab Project
+      - LIS Software Tech
+      - Personnel
+      - Sales
+      - Toxicology
     
   - netsuiteId: custbodyvolume_verified_status
     type: text
@@ -157,11 +184,20 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Beacon.LIS.cf_484836
+    allowedValues:
+      - Tier 1 Light
+      - Tier 2 Basic
+      - Tier 3 Premium
     
   - netsuiteId: custbodylaboratory_director_staffing
     type: text
     fieldSource: field # field / formula / const
     copperField: Laboratory.Director.Staffing.cf_484837
+    allowedValues:
+      - Laboratory Director
+      - Clinical Consultant
+      - Tech Supervisor
+      - Tech Consultant
     
   - netsuiteId: custbodystage_classifications
     type: text
@@ -172,11 +208,29 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: COVID-19.Testing.Start-Up cf_484834
+    allowedValues:
+      - App Processing
+      - COVIDNow Assay
+      - Equipment
+      - FluVidNow Assay
+      - Lab Design & Layout
+      - Material
+      - Recruiting
+      - SalivaNow Assay
+      - Validation
     
   - netsuiteId: custbodymanagement_services
     type: text
     fieldSource: field # field / formula / const
     copperField: Management.Services.for.Covid-19 Labs.cf_484835
+    allowedValues:
+      - Collection Tubes
+      - CovidNow Assay Reagents
+      - DA/DR
+      - Quality Full
+      - Quality Lite
+      - SalivaNow Assay Reagents
+      - Testing Supplies
     
   - netsuiteId: custbodydeal_overview
     type: text

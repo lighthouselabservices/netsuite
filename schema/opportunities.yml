@@ -20,6 +20,11 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Name
+    
+  - netsuiteId: contact
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: primary.person.contact
 
   - netsuiteId: entitystatus
     type: text

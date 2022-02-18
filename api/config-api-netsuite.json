@@ -1,8 +1,8 @@
 {
-  "consumer_key": "c43ee88543fa8cb24104a68160576c3aae64c4c1b9679fab86e580c1c99d5266",
-  "consumer_secret_key": "8bf2e4bfed8c0cdfb8efed6452bbdff25e03228f97b589bebf9f7dbc8480a332",
-  "token": "a211f1947c8d39973d1c9fcd736953a1b426d715fd0f8a3a6d47cac4cc4c0256",
-  "token_secret": "a6dbed19e5fa879c0f2f82359dfb288263f591c99310e630626a967f9291db19",
+  "consumer_key": "ad75e6fd0406087e02561fe4872ddbed6376040f2aa3bd629e92e1652c510cc1",
+  "consumer_secret_key": "8603c6adbb75d3cd717c8b67a2ee8928b3e4daf75fa322444705b17eb52ea1e1",
+  "token": "a2e9f3aec3971a62d353ecb6b6270a83072346da43a3e2dc5087e08bb5fe2a08",
+  "token_secret": "1f2886e21debb2952cacc1e868f8e39d3cfa1238961c802fa065ddde19c63e25",
   "realm": "5256042_SB1",
   "base_url": "https://5256042-sb1.suitetalk.api.netsuite.com"
 }

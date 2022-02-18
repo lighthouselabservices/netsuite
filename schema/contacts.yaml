@@ -32,33 +32,6 @@ leads:
     fieldSource: field # field / formula / const
     copperField: Account
 
-  - netsuiteId: entity status
-    type: text
-    fieldSource: field # field / formula / const
-    copperField: Status
-    allowedValues:
-      - New
-      - Contact Attempted
-      - Need Analysis
-      - Unqualified
-      - Junk
-      - Job Seeker
-      - Purgatory
-
-  - netsuiteId: category
-    type: text
-    fieldSource: field # field / formula / const
-    copperField: Division.of.Interest.cf_267162
-    default: General Inquiry
-    allowedValues:
-      - Consulting/Lab Startup
-      - Lab Director
-      - Recruiting
-      - Covid 19 Consulting
-      - Beacon LIS
-      - RCM
-      - General Inquiry
-
   - netsuiteId: comments
     type: text
     fieldSource: field # field / formula / const
@@ -102,7 +75,7 @@ leads:
   - netsuiteId: leadsource
     type: text
     fieldSource: field # field / formula / const
-    copperField: Source
+    copperField: Source.(Person).cf_442249
     allowedValues:
       - Webform - Lighthouse
       - Webform - Elite
@@ -135,6 +108,11 @@ leads:
     type: text
     fieldSource: field # field / formula / const
     copperField: Last.Contacted
+    
+  - netsuiteId: custentity_esc_last_modified_date
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Updated.At
         
   - netsuiteId: defaultaddress
     type: text

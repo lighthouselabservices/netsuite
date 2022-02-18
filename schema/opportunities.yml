@@ -9,20 +9,48 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Close.Date
-
+    
+  - netsuiteId: salesrep
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: owner
+     allowedValues:
+    
   - netsuiteId: Title
     type: text
     fieldSource: field # field / formula / const
     copperField: Name
+    
+  - netsuiteId: contact
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: primary.person.contact
 
   - netsuiteId: entitystatus
     type: text
     fieldSource: field # field / formula / const
     copperField: Status
     allowedValues:
+      - Open 
       - Won
       - Abandoned
       - Lost
+      
+  - netsuiteId: custbodyhot_opportunity
+    type: checkbox
+    fieldSource: field # field / formula / const
+    copperField: Hot.Opportunity.cf_394974
+    allowedValues:
+      - checked
+      - not checked
+       
+  - netsuiteId: custbodysocks
+    type: checkbox
+    fieldSource: field # field / formula / const
+    copperField: SOCKS.-.Secured.Ongoing.Economics.for.ID/Tox.cf_513913
+    allowedValues:
+      - checked
+      - not checked 
 
   - netsuiteId: winlossreason
     type: text
@@ -35,8 +63,13 @@ opportunities:
       - Features
       - Competitor
       - Lack of Budget
-
+      
   - netsuiteId: probability
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Win.Probability     
+
+  - netsuiteId:  projectedtotal
     type: text
     fieldSource: field # field / formula / const
     copperField: Win.Probability
@@ -45,18 +78,63 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Webform.Info.cf_266912
-
-  - netsuiteId: custbody4
+    
+  - netsuiteId: custbodyopportunity_type_list
     type: text
     fieldSource: field # field / formula / const
-    copperField: Profit
+    copperField: Opportunity.Type.(JUST ONE).cf_483312
+    allowedValues:
+      - Beacon
+      - CLIA App
+      - Consulting Block
+      - COVID Project
+      - Equipment Sale
+      - ID Project
+      - Lab Project
+      - META
+      - MSA (COVID)
+      - MSA (ID)
+      - MSA (Tox)
+      - PTLD
+      - Supplies
+      - Tox Project
+      - Recruiting
+      - RCM Consulting
+      - Network Contracting
+    
+  - netsuiteId: custbodyopportunity_type_class
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Opportunity.Type.Classification.cf_506033
+    allowedValues:
+      - Billing
+      - Consulting
+      - Infectious Disease
+      - Lab Project
+      - LIS Software Tech
+      - Personnel
+      - Sales
+      - Toxicology
+    
+  - netsuiteId: custbodyvolume_verified_status
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Volume.Verified.Status.cf_509896
+    allowedValues:
+      - Not Verified
+      - Verified
+
+  - netsuiteId: custbody1
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Profit.(est.first.year).cf_483313
 
   - netsuiteId: projectedtotal
     type: text
     fieldSource: field # field / formula / const
     copperField: Value
 
-  - netsuiteId: custbody_esc_last_modified_date
+  - netsuiteId: custpage_lsa_vis
     type: text
     fieldSource: field # field / formula / const
     copperField: Updated.At
@@ -81,7 +159,12 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Last.Contacted
-
+    
+  - netsuiteId: custbodyproposed_economics
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Proposed.Economics.cf_484840
+    
   - netsuiteId: custbody_esc_created_date
     type: text
     fieldSource: field # field / formula / const
@@ -91,11 +174,73 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Updated.At
-
-  - netsuiteId: location
+    
+  - netsuiteId: custbodycurrent_and_next_steps
     type: text
     fieldSource: field # field / formula / const
-    copperField: Location
+    copperField: Current.Status.&.Next.Steps.cf_197611
+    
+  - netsuiteId: custbodymonthly_volume
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Monthly.Volume cf_483315
+    
+  - netsuiteId: custbodybeacon_lis
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Beacon.LIS.cf_484836
+    allowedValues:
+      - Tier 1 Light
+      - Tier 2 Basic
+      - Tier 3 Premium
+    
+  - netsuiteId: custbodylaboratory_director_staffing
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Laboratory.Director.Staffing.cf_484837
+    allowedValues:
+      - Laboratory Director
+      - Clinical Consultant
+      - Tech Supervisor
+      - Tech Consultant
+    
+  - netsuiteId: custbodystage_classifications
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Stage.Classification.cf_505796
+    
+  - netsuiteId: custbodytesting_startup
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: COVID-19.Testing.Start-Up cf_484834
+    allowedValues:
+      - App Processing
+      - COVIDNow Assay
+      - Equipment
+      - FluVidNow Assay
+      - Lab Design & Layout
+      - Material
+      - Recruiting
+      - SalivaNow Assay
+      - Validation
+    
+  - netsuiteId: custbodymanagement_services
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Management.Services.for.Covid-19 Labs.cf_484835
+    allowedValues:
+      - Collection Tubes
+      - CovidNow Assay Reagents
+      - DA/DR
+      - Quality Full
+      - Quality Lite
+      - SalivaNow Assay Reagents
+      - Testing Supplies
+    
+  - netsuiteId: custbodydeal_overview
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Deal.Overview.cf_484436
 
   - netsuiteId: leadsource
     type: text

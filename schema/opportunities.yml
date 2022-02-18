@@ -178,7 +178,7 @@ opportunities:
   - netsuiteId: custbodycurrent_and_next_steps
     type: text
     fieldSource: field # field / formula / const
-    copperField: Current.Status.&.Next.Steps.cf_197611
+    copperField: Current.Status
     
   - netsuiteId: custbodymonthly_volume
     type: text

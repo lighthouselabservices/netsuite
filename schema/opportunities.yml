@@ -134,7 +134,7 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: Value
 
-  - netsuiteId: custbody_esc_last_modified_date
+  - netsuiteId: custpage_lsa_vis
     type: text
     fieldSource: field # field / formula / const
     copperField: Updated.At

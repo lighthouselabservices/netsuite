@@ -4,10 +4,12 @@ const api = require('./plugins/netsuiteApi.js');
 
 // sample lead
 const lead = {
-  companyName: `VK viaAPI ${Date().toString().substring(0, 25)} `,
-  email: 'apitest@company.com',
+  firstName: 'Vitali',
+  lastName: 'Test',
+  companyName: `VK viaAPI1 ${Date().toString().substring(0, 25)} `,
+  email: 'apitest1@company.com',
   entityStatus: '6',
-  isPerson: false,
+  isPerson: true,
   leadSource: '-6',
   subsidiary: '2',
 };

@@ -19,7 +19,7 @@ async function createCustomer(body = {}) {
 	if (Object.keys(body).length === 0) return null;
 
 	const res = await NsApi.request({
-		path: '/v1/create-customer/',
+		path: 'record/v1/customer/',
 		method: 'POST',
 		body: JSON.stringify(body),
 	});

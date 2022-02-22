@@ -42,7 +42,7 @@ prospects:
     fieldSource: field # field / formula / const
     copperField: email
     
- - netsuiteId: phone
+  - netsuiteId: phone
     type: text
     fieldSource: field # field / formula / const
     copperField: Phone.Number

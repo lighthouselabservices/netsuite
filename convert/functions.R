@@ -27,7 +27,14 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
     }
 
     # create net suite field from copper source field
-    if (fld$fieldSource == "field") res_dt[[fld_id]] <- dt_in[[fld$copperField]]
+    if (fld$fieldSource == "field") {
+      
+      add_field = dt_in[[fld$copperField]]
+      
+      if (is.null(add_field)) next
+      
+      res_dt[[fld_id]] <- add_field
+    } 
 
     # convert if text
     if (fld$type == "text") {

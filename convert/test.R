@@ -2,16 +2,19 @@
 source("global.R")
 #  ---- test leads conversion ----
 
-conversion_type = "Leads"
+conversion_type = "Opportunities"
+fl_in <- "F:/Netsuite/CopperCRM/Prospects.csv"
+
+#-------
 config = config_options[conversion_type]
 
 # load source data file
-fl_in <- "D:/Downloads/leads.csv"
+
 dt_in <- fread(fl_in, check.names = T)
 
 # read leads cofigration in YAML from github
 
-conf_all <- GetConfig("leads.yaml")
+conf_all <- GetConfig(config)
 listviewer::jsonedit(conf_all)
 
 conf = conf_all$conf
@@ -21,9 +24,10 @@ res_dt <- ConvertFields(dt_in = dt_in, conf = conf)
 
 # post processing functions
 
-PostProcess <- get(conversion_type)
+PostProcess <- try( get(conversion_type) )
 
-res = PostProcess(res_dt, conf_opt)
+if (class(PostProcess) != "try-error") res = PostProcess(res_dt, conf_opt) else res=res_dt
+
 
 anyDuplicated(res$uniqueId)
 

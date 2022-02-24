@@ -38,11 +38,6 @@ prospects:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Category
-    
-  - netsuiteId: custentitywebform_lead_id_number
-    type: text
-    fieldSource: field # field / formula / const
-    copperField: Webform.Info.cf_266912
 
   - netsuiteId: comments
     type: text
@@ -73,13 +68,13 @@ prospects:
     type: text
     fieldSource: field # field / formula / const
     copperField: Phone.Number.5
-        
-  - netsuiteId: comments
-    type: text
-    fieldSource: field # field / formula / const
-    copperField: Webform.Info
     
   - netsuiteId: defaultaddress
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: street
+ 
+ - netsuiteId: defaultaddress
     type: text
     fieldSource: field # field / formula / const
     copperField: city

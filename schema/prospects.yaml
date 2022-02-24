@@ -72,7 +72,7 @@ prospects:
   - netsuiteId: comments
     type: text
     fieldSource: field # field / formula / const
-    copperField: Webform_Info
+    copperField: Webform.Info
     
   - netsuiteId: defaultaddress
     type: text

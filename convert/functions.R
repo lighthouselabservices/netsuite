@@ -127,6 +127,7 @@ GetConfig <- function(schema_yaml = NULL) {
 }
 
 # ---- conversion functions ----
+
 GetBestPhone = function(dt_in){
   if(is.null(dt_in$Phone.Number) ) return(NULL)
   
@@ -136,6 +137,12 @@ GetBestPhone = function(dt_in){
   res[Phone.Number == '', Phone.Number := Phone.Number.3]
   
   return(res$Phone.Number)
+  
+}
+
+CombineAddress <- function (dt_in){
+  
+  return('address')
   
 }
 

@@ -165,7 +165,7 @@ prospects:
     fieldSource: const 
     default: LLS 
 
-  - netsuiteId: individual
+  - netsuiteId: Individual
     type: text
     fieldSource: const 
     default: "Y" 

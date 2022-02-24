@@ -42,7 +42,7 @@ prospects:
   - netsuiteId: comments
     type: text
     fieldSource: field # field / formula / const
-    copperField: form Info.cf_266912
+    copperField: Webform.Info
   
   - netsuiteId: phone
     type: text

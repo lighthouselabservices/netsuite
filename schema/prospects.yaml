@@ -9,7 +9,7 @@ prospects:
   - netsuiteId: entitystatus
     type: firstname
     fieldSource: field # field / formula / const
-    copperField: Person.Status.cf_519035
+    copperField: Person.Status
     allowedValues:
        - PROSPECT-Purgatory
        - PROSPECT-Discussion

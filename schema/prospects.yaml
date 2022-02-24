@@ -72,9 +72,9 @@ prospects:
   - netsuiteId: defaultaddress
     type: text
     fieldSource: field # field / formula / const
-    copperField: street
+    copperField: street 
  
- - netsuiteId: defaultaddress
+  - netsuiteId: defaultaddress
     type: text
     fieldSource: field # field / formula / const
     copperField: city

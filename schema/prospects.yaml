@@ -7,7 +7,7 @@ prospects:
     copperField: Company
 
   - netsuiteId: entitystatus
-    type: firstname
+    type: text
     fieldSource: field # field / formula / const
     copperField: Person.Status.cf_519035
     allowedValues:
@@ -40,9 +40,9 @@ prospects:
     copperField: Category
     
   - netsuiteId: custentitywebform_lead_id_number
-    type: firstname
+    type: text
     fieldSource: field # field / formula / const
-    copperField: Webform.Lead.ID.Number.cf_526011
+    copperField: Webform.Info.cf_266912
 
   - netsuiteId: comments
     type: text
@@ -102,7 +102,7 @@ prospects:
   - netsuiteId: cseg_lead_source_
     type: text
     fieldSource: field # field / formula / const
-    copperField: Source.Person
+    copperField: Source.(Person).cf_442249
     allowedValues:
        - Webform - Lighthouse
        - Webform - Elite
@@ -135,7 +135,21 @@ prospects:
     type: text
     fieldSource: field 
     copperField: Contact.Type
-
+    allowedValues:
+       - Potential Customer
+       - Current Customer
+       - Owner
+       - Decision Maker
+       - Buyer
+       - Sales Rep
+       - CLIA Lab Director
+       - Vendor
+       - Consultant
+       - POL Owner
+       - Partner
+       - Co-Worker
+       - Influencer
+    
   - netsuiteId: email
     type: text
     fieldSource: field 

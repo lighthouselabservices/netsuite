@@ -141,8 +141,18 @@ GetBestPhone = function(dt_in){
 }
 
 CombineAddress <- function (dt_in){
+  if(is.null(dt_in$Street) ) return(NULL)
+  res = dt_in$Street
   
-  return('address')
+  if(!is.null(dt_in$City) )  res = res %>% paste (dt_in$City)
+  if(!is.null(dt_in$State) )  res = res %>% paste (dt_in$State)
+  if(!is.null(dt_in$Postal.Code) )  res = res %>% paste (dt_in$Postal.Code)
+  if(!is.null(dt_in$Country) )  res = res %>% paste (dt_in$Country)
+  
+  # cleanup 
+  res = str_squish(res)
+  
+  return(res)
   
 }
 

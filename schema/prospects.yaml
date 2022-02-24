@@ -38,6 +38,11 @@ prospects:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Category
+    
+  - netsuiteId: custentitywebform_lead_id_number
+    type: firstname
+    fieldSource: field # field / formula / const
+    copperField: Webform.Lead.ID.Number.cf_526011
 
   - netsuiteId: comments
     type: text

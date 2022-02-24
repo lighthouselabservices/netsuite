@@ -159,3 +159,8 @@ prospects:
     type: text
     fieldSource: field 
     copperField: ProsperWorks.ID
+
+  - netsuiteId: subsidiary
+    type: text
+    fieldSource: const 
+    default: LLS 

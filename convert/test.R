@@ -2,8 +2,8 @@
 source("global.R")
 #  ---- test leads conversion ----
 
-conversion_type = "Opportunities"
-fl_in <- "F:/Netsuite/CopperCRM/Prospects.csv"
+conversion_type = "Prospects"
+fl_in <- "E:/Netsuite/CopperCRM/prospects 2022-02-24 for test upload.csv"
 
 #-------
 config = config_options[conversion_type]
@@ -11,6 +11,8 @@ config = config_options[conversion_type]
 # load source data file
 
 dt_in <- fread(fl_in, check.names = T)
+
+names_dt_in = data.table(names=names(dt_in))
 
 # read leads cofigration in YAML from github
 

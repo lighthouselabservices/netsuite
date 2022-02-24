@@ -10,7 +10,14 @@ prospects:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Status
-        
+    allowedValues:
+       - PROSPECT-Purgatory
+       - PROSPECT-Discussion
+       - PROSPECT-Proposal Sent
+       - PROSPECT-Proposal Approved
+       - PROSPECT-Contract Sent
+       - PROSPECT-Contract Negotiation
+    
   - netsuiteId: first Name # field id of netsuite
     type: firstname
     fieldSource: field # field / formula / const
@@ -35,7 +42,7 @@ prospects:
   - netsuiteId: comments
     type: text
     fieldSource: field # field / formula / const
-    copperField: Webform_Info
+    copperField: form Info.cf_266912
   
   - netsuiteId: phone
     type: text
@@ -133,5 +140,7 @@ prospects:
     type: text
     fieldSource: field 
     copperField: Website
+    
+    
        
     

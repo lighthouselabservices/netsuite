@@ -97,7 +97,39 @@ prospects:
   - netsuiteId: cseg_lead_source_
     type: text
     fieldSource: field # field / formula / const
-    copperField: Source.Person.cf_442249
+    copperField: Source.Person
+    allowedValues:
+       - Webform - Lighthouse
+       - Webform - Elite
+       - Webform - Lighthouse (PTLD)
+       - Webform - Lighthouse (Recruiting)
+       - Webform - (Lighthouse - General Inquiry)
+       - Phone Lead - Lighthouse
+       - Phone Lead - Elite
+       - Employee Referral
+       - Client Referral
+       - Medline Referral
+       - Vendor Referral
+       - Existing Client
+       - LinkedIn
+       - Lighthouse
+       - Other
+       - Webinar
+       - Advertising
+       - Trade Show
+       - Cold Call
+       - Email - Lighthouse
+       - Newsletter Lead
+       - Distributor Form - Elite
+       - Webform - Lighthouse (Covid)
+       - Outbound Sales Team
+       - Webform - Beaconlis
+       - Webform - Alt Assessment Program
+
+ - netsuiteId: cseg_lead_source_
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Source.Person.Old
     allowedValues:
        - Webform - Lighthouse
        - Webform - Elite

@@ -90,7 +90,7 @@ prospects:
   - netsuiteId: cseg_lead_source_
     type: text
     fieldSource: field # field / formula / const
-    copperField: Source
+    copperField: Source.(Person).cf_442249
     allowedValues:
        - Webform - Lighthouse
        - Webform - Elite

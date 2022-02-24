@@ -127,3 +127,8 @@ prospects:
     type: text
     fieldSource: const 
     default: "Y" 
+
+  - netsuiteId: source
+    type: text
+    fieldSource: field 
+    copperField: "Source..Person..cf_442249"

@@ -4,12 +4,8 @@
 // https://github.com/ehmad11/netsuite-rest
 
 const NsApiWrapper = require('netsuite-rest');
+const cnf = require('./getfiles.server');
 
-// TODO: get config from google bucket
-const config = require('../config.js');
-
-// Auth 1.0 Wrapper for Netsuite
-NsApi = new NsApiWrapper(config);
 
 /**
  * Creates customer or lead.
@@ -17,6 +13,12 @@ NsApi = new NsApiWrapper(config);
  */
 async function createCustomer(body = {}) {
 	if (Object.keys(body).length === 0) return null;
+
+	// get config form bucket
+	const config = await cnf.GetFile('lh-app-config', 'config-api-netsuite.json');
+
+	// Auth 1.0 Wrapper for Netsuite
+	NsApi = new NsApiWrapper(config);
 
 	const res = await NsApi.request({
 		path: 'record/v1/customer/',

@@ -160,7 +160,7 @@ prospects:
     fieldSource: field 
     copperField: Website
     
-  - netsuiteId: Copper ID
+  - netsuiteId: custentitycopperid
     type: text
     fieldSource: field 
     copperField: ProsperWorks.ID

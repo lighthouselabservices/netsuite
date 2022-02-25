@@ -133,3 +133,8 @@ prospects:
     fieldSource: field 
     default : "Webform - Beacon LIS"
     copperField: "Source..Person..cf_442249"
+
+# additional options for post processing scripts
+options:
+  commentLimit: 600
+

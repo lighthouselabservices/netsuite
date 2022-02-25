@@ -120,12 +120,16 @@ leads:
     type: text
     fieldSource: field # field / formula / const
     copperField: Owned.By
+    
+  - netsuiteId: custentitycopperid
+    type: text
+    fieldSource: field 
+    copperField: ProsperWorks.ID
         
   - netsuiteId: custentitylead_status_class
     type: text
     fieldSource: field # field / formula / const
     copperField: Status.Classification.cf_505550
-
 
 # additional options for post processing scripts
 options:

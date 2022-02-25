@@ -137,4 +137,5 @@ prospects:
 # additional options for post processing scripts
 options:
   commentLimit: 600
+  maxPhoneLenght: 32
 

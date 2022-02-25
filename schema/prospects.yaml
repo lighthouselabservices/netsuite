@@ -34,7 +34,7 @@ prospects:
     fieldSource: field # field / formula / const
     copperField: Middle.Name
 
-  - netsuiteId: category
+  - netsuiteId: custentitycategory_list
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Category
@@ -84,7 +84,7 @@ prospects:
        - Webform - Beaconlis
        - Webform - Alt Assessment Program
 
-  - netsuiteId: contact_type
+  - netsuiteId: custentitycontact_type
     type: text
     fieldSource: field 
     copperField: Contact.Type

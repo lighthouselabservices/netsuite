@@ -11,11 +11,13 @@ prospects:
     fieldSource: field # field / formula / const
     copperField: Person.Status.cf_519035
     allowedValues:
+       - PROSPECT-Purgatory
        - PROSPECT-Negotiation
        - PROSPECT-Proposal Sent
        - PROSPECT-Proposal Approved
        - PROSPECT-Contract Sent
        - PROSPECT-Contract Negotiation
+       
     
   - netsuiteId: first Name # field id of netsuite
     type: firstname

@@ -135,7 +135,7 @@ leads:
 # additional options for post processing scripts
 options:
   nameDefault: "Unknown"
-  sourcePrefix: "Leads-"
+  sourcePrefix: "LEAD-"
   idLength: 25
   commentLimit: 600
   maxPhoneLenght: 32

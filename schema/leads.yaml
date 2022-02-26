@@ -36,8 +36,9 @@ leads:
     type: text
     fieldSource: field # field / formula / const
     copperField: Status
-    default: "LEAD-Need Analysis"
+    default: "Need Analysis"
     allowedValues:
+      - Need Analysis
       - job seeker
       - junk
       - Need Analysis

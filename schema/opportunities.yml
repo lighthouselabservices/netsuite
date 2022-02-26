@@ -240,6 +240,11 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Deal.Overview.cf_484436
+    
+  - netsuiteId: CopperID
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: ProsperWorks ID
 
   - netsuiteId: leadsource
     type: text

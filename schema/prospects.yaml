@@ -133,6 +133,33 @@ prospects:
     fieldSource: field 
     default : "Webform - Beacon LIS"
     copperField: "Source..Person..cf_442249"
+    allowedValues:
+    - Webform - Lighthouse
+    - Webform - Elite
+    - Webinar
+    - Webform - Lighthouse (Recruiting)
+    - Webform - Lighthouse (PTLD)
+    - Webform - Lighthouse (Covid)
+    - Webform - Beaconlis
+    - Webform - Alt Assessment Program
+    - Webform - (Lighthouse - General Inquiry)
+    - Vendor Referral
+    - Trade Show
+    - Phone Lead - Lighthouse
+    - Phone Lead - Elite
+    - Other
+    - Outbound Sales Team
+    - Newsletter Lead
+    - Medline Referral
+    - LinkedIn
+    - Lighthouse
+    - Existing Client
+    - Employee Referral
+    - Email - Lighthouse
+    - Distributor Form - Elite
+    - Cold Call
+    - Client Referral
+    - Advertising
 
 # additional options for post processing scripts
 options:

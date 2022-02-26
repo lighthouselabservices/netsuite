@@ -72,6 +72,11 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Win.Probability
+    
+  - netsuiteId:  projectedtotal
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: primary.contact.person
 
   - netsuiteId: memo
     type: text

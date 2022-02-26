@@ -3,7 +3,9 @@ source("global.R")
 #  ---- test leads conversion ----
 
 conversion_type = "Prospects"
-fl_in <-"E:/Netsuite/CopperCRM/people (15).csv"
+if(conversion_type == 'Prospects') fl_in <-"E:/Netsuite/CopperCRM/prospect for go live.csv"
+if(conversion_type == 'Leads')fl_in <-"E:/Netsuite/CopperCRM/leads.csv"
+message('Processing ', conversion_type)
 
 #-------
 config = config_options[conversion_type]
@@ -30,8 +32,11 @@ PostProcess <- try( get(conversion_type) )
 
 if (class(PostProcess) != "try-error") res = PostProcess(res_dt, conf_opt) else res=res_dt
 
-
 anyDuplicated(res$uniqueId)
+
+message(" Max comment: ", max(nchar(res$comments)))
+message(" Max phone: ", max(nchar(res$phone)) )
+
 
 # res = setorder(res, uniqueId)
 # 

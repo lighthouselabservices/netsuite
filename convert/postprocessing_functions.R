@@ -10,19 +10,20 @@ Leads <- function(res_dt, conf_opt = NULL) {
 
   # prefer company lead
   res_dt[companyname != "", Individual := "N"]
+  
+  # limit length of comments
+  comment_limit = conf_opt$commentLimit
+  res_dt[, comments:= str_sub(comments, 1, comment_limit)]
+  
+  # limit length of comments
+  max_phone_number = conf_opt$maxPhoneLenght
+  res_dt[, phone:= str_sub(phone, 1, max_phone_number)] 
 
   # fill individual last name and first name
   if (is.null(conf_opt)) {
     return(res_dt)
   }
-  name_replace <- conf_opt$nameDefault
-  if (is.null(name_replace)) {
-    return(res_dt)
-  }
-
-  res_dt[Individual == "Y" & `Last Name` == "", `Last Name` := name_replace]
-  res_dt[Individual == "Y" & `first Name` == "", `first Name` := name_replace]
-
+  
   # remove junk leads
   if ("entity status" %in% names(res_dt)) {
     res_dt <- res_dt[!`entity status` %chin% c("Junk", "Unqualified"), ]
@@ -36,14 +37,21 @@ Leads <- function(res_dt, conf_opt = NULL) {
     res_dt[, datesort := NULL]
   }
 
-
-
   # add prefix to leadsource
   if ("leadsource" %in% names(res_dt)) {
     lead_prefix <- conf_opt$sourcePrefix
     if (!is.null(lead_prefix)) res_dt[, leadsource := paste0(lead_prefix, leadsource)]
   }
 
+  
+  name_replace <- conf_opt$nameDefault
+  if (is.null(name_replace)) {
+    return(res_dt)
+  }
+  
+  res_dt[Individual == "Y" & `Last Name` == "", `Last Name` := name_replace]
+  res_dt[Individual == "Y" & `first Name` == "", `first Name` := name_replace]
+  
   # add unique id
   unique_id_len <- conf_opt$idLength
   res_dt[, uniqueId := paste0(`first Name`, `Last Name`, companyname) %>% str_squish()]
@@ -56,6 +64,7 @@ Leads <- function(res_dt, conf_opt = NULL) {
   }, USE.NAMES = F)
 
   res_dt <- unique(res_dt, by = "uniqueId")
+  
 
   return(res_dt)
 }
@@ -73,10 +82,19 @@ Prospects <- function(res_dt, conf_opt = NULL) {
   # prefer company lead
   res_dt[companyname != "", Individual := "N"]
   
+  # limit length of comments
+  comment_limit = conf_opt$commentLimit
+  res_dt[, comments:= str_sub(comments, 1, comment_limit)]
+  
+  # limit length of comments
+  max_phone_number = conf_opt$maxPhoneLenght
+  res_dt[, phone:= str_sub(phone, 1, max_phone_number)]  
+  
   # fill individual last name and first name
   if (is.null(conf_opt)) {
     return(res_dt)
   }
+  
   name_replace <- conf_opt$nameDefault
   if (is.null(name_replace)) {
     return(res_dt)
@@ -85,13 +103,7 @@ Prospects <- function(res_dt, conf_opt = NULL) {
   res_dt[Individual == "Y" & `Last Name` == "", `Last Name` := name_replace]
   res_dt[Individual == "Y" & `first Name` == "", `first Name` := name_replace]
   
-# limit length of comments
-  comment_limit = conf_opt$commentLimit
-  res_dt[, comments:= str_sub(comments, 1, comment_limit)]
-  
-# limit length of comments
-  max_phone_number = conf_opt$maxPhoneLenght
-  res_dt[, phone:= str_sub(phone, 1, max_phone_number)]  
+
 
   return(res_dt)
 }

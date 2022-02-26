@@ -36,14 +36,15 @@ leads:
     type: text
     fieldSource: field # field / formula / const
     copperField: Status
+    default: "LEAD-Need Analysis"
     allowedValues:
-      - LEAD-job seeker
-      - LEAD-junk
-      - LEAD-Need Analysis
-      - LEAD-New
-      - LEAD-Not Qualified
-      - LEAD-Purgatory
-      - LEAD-Unqualified
+      - job seeker
+      - junk
+      - Need Analysis
+      - New
+      - Not Qualified
+      - Purgatory
+      - Unqualified
 
   - netsuiteId: category
     type: text

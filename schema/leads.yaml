@@ -136,3 +136,5 @@ options:
   nameDefault: "Unknown"
   sourcePrefix: "Leads-"
   idLength: 25
+  commentLimit: 600
+  maxPhoneLenght: 32

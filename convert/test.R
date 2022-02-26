@@ -2,7 +2,7 @@
 source("global.R")
 #  ---- test leads conversion ----
 
-conversion_type = "Prospects"
+conversion_type = "Leads"
 if(conversion_type == 'Prospects') fl_in <-"E:/Netsuite/CopperCRM/prospect for go live.csv"
 if(conversion_type == 'Leads')fl_in <-"E:/Netsuite/CopperCRM/leads.csv"
 message('Processing ', conversion_type)

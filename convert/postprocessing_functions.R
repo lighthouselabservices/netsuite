@@ -42,6 +42,13 @@ Leads <- function(res_dt, conf_opt = NULL) {
     lead_prefix <- conf_opt$sourcePrefix
     if (!is.null(lead_prefix)) res_dt[, leadsource := paste0(lead_prefix, leadsource)]
   }
+  
+  # add prefix to entity status
+  if ("entity status" %in% names(res_dt)) {
+    lead_prefix <- conf_opt$sourcePrefix
+    if (!is.null(lead_prefix)) res_dt[, `entity status` := paste0(lead_prefix, `entity status`)]
+  }
+
 
   
   name_replace <- conf_opt$nameDefault

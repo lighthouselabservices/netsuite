@@ -3,7 +3,7 @@ source("global.R")
 #  ---- test leads conversion ----
 
 conversion_type = "Prospects"
-fl_in <-"E:/Netsuite/CopperCRM/PROSPECT FOR TRISH.csv"
+fl_in <-"E:/Netsuite/CopperCRM/people (15).csv"
 
 #-------
 config = config_options[conversion_type]

@@ -59,7 +59,18 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
 
     # check for allowed values
     allowed_values <- fld$allowedValues
-    if (is.null(allowed_values)) next
+    if (is.null(allowed_values)) {
+      
+     # check if field has default value
+      default_value <- fld$default
+      if (is.null(default_value)) next
+      
+      # replace missing / empty values with default values
+      fld_lenght =  str_remove_all(res_dt[[fld_id]], " ")  %>% nchar() 
+      res_dt[[fld_id]][which(fld_lenght == 0)] <- default_value
+      
+      next
+    }
 
     # logic for default value
     # if default value is not specified use the first value
@@ -67,7 +78,6 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
     if (is.null(default_value)) default_value <- allowed_values[1]
 
     # check allowed values and replace with default value if missing
-
     is_allowed <- res_dt[[fld_id]] %chin% allowed_values
     if (!all(is_allowed))  res_dt[!is_allowed][[fld_id]] <- default_value
     

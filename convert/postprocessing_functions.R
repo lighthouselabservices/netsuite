@@ -85,6 +85,13 @@ Prospects <- function(res_dt, conf_opt = NULL) {
   res_dt[Individual == "Y" & `Last Name` == "", `Last Name` := name_replace]
   res_dt[Individual == "Y" & `first Name` == "", `first Name` := name_replace]
   
+# limit length of comments
+  comment_limit = conf_opt$commentLimit
+  res_dt[, comments:= str_sub(comments, 1, comment_limit)]
+  
+# limit length of comments
+  max_phone_number = conf_opt$maxPhoneLenght
+  res_dt[, phone:= str_sub(phone, 1, max_phone_number)]  
 
   return(res_dt)
 }

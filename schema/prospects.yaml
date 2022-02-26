@@ -131,7 +131,6 @@ prospects:
   - netsuiteId: source
     type: text
     fieldSource: field 
-    default : "Webform - Beacon LIS"
     copperField: "Source..Person..cf_442249"
     allowedValues:
     - Webform - Lighthouse

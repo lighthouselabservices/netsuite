@@ -68,10 +68,15 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: Win.Probability     
 
-  - netsuiteId:  projectedtotal
+  - netsuiteId: projectedtotal
     type: text
     fieldSource: field # field / formula / const
     copperField: Win.Probability
+    
+  - netsuiteId:  projectedtotal
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: primary.contact.person
 
   - netsuiteId: memo
     type: text
@@ -241,10 +246,10 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: Deal.Overview.cf_484436
     
-  - netsuiteId: CopperID
+  - netsuiteId: externalID
     type: text
     fieldSource: field # field / formula / const
-    copperField: ProsperWorks ID
+    copperField: ProsperWorks.ID
 
   - netsuiteId: leadsource
     type: text

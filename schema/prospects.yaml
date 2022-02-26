@@ -27,7 +27,7 @@ prospects:
     type: firstname
     fieldSource: field # field / formula / const
     copperField: Last.Name
-    Default: "Unknown"
+    default: "Unknown"
     
   - netsuiteId: Middle Name # field id of netsuite
     type: middlename

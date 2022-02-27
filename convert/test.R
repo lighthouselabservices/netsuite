@@ -2,7 +2,7 @@
 source("global.R")
 #  ---- test leads conversion ----
 
-conversion_type = "Opportunities"
+conversion_type = "Prospects"
 if(conversion_type == 'Prospects') fl_in <-"E:/Netsuite/CopperCRM/prospect for go live.csv"
 if(conversion_type == 'Leads')fl_in <-"E:/Netsuite/CopperCRM/leads.csv"
 if(conversion_type == 'Opportunities')fl_in <-"E:/Netsuite/CopperCRM/opp go live v. 4 PRE conversion.csv"
@@ -28,11 +28,13 @@ conf_opt = conf_all$options
 
 res_dt <- ConvertFields(dt_in = dt_in, conf = conf)
 
-# post processing functions
-
+# Postprocessing
 PostProcess <- try( get(conversion_type) )
-
 if (class(PostProcess) != "try-error") res = PostProcess(res_dt, conf_opt) else res=res_dt
+
+# Common post processing
+res <- CommonPostProcessiing(res)
+
 
 anyDuplicated(res$uniqueId)
 

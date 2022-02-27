@@ -81,6 +81,9 @@ shinyServer(function(input, output, session) {
     PostProcess <- get(input$type)
     dt_out = PostProcess(dt_out, conf$options)
     }
+    
+    # common post processing
+    dt_out <- CommonPostProcessiing(dt_out)
 
     return(dt_out)
   })

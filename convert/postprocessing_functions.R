@@ -135,3 +135,19 @@ Opportunities <- function(res_dt, conf_opt = NULL) {
   return(res_dt)
 }
 
+# ------------
+
+# common posts processing functions
+CommonPostProcessiing <- function(res_dt){
+ 
+  # clean phone number
+  if('phone' %in% names(res_dt)){
+    res_dt$phone <- res_dt$phone %>% str_remove_all("'")
+  }
+  
+  return(res_dt)
+   
+  
+}
+
+

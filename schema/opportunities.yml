@@ -125,7 +125,7 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: Volume.Verified.Status.cf_509896
     allowedValues:
-      - Not Verified
+      - Unverified
       - Verified
 
   - netsuiteId: custbody1

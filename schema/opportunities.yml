@@ -40,16 +40,16 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: Hot.Opportunity.cf_394974
     allowedValues:
+      - unchecked
       - checked
-      - not checked
        
   - netsuiteId: custbodysocks
     type: checkbox
     fieldSource: field # field / formula / const
     copperField: SOCKS.-.Secured.Ongoing.Economics.for.ID/Tox.cf_513913
     allowedValues:
-      - checked
-      - not checked 
+      - "No"
+      - "Yes" 
 
   - netsuiteId: winlossreason
     type: text
@@ -282,3 +282,6 @@ opportunities:
       - Webform - Lighthouse (Covid)
       - Outbound Sales Team
       - Webform - Beaconlis
+options:
+  maxMemo: 990
+  maxEconomics: 300

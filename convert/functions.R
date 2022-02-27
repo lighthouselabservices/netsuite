@@ -8,6 +8,7 @@ ConvertFields <- function(dt_in = NULL, conf = NULL) {
   if (is.null(dt_in)) {
     return(NULL)
   }
+  
   if (is.null(conf)) {
     return(NULL)
   }

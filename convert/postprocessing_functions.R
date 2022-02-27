@@ -114,3 +114,24 @@ Prospects <- function(res_dt, conf_opt = NULL) {
 
   return(res_dt)
 }
+
+# --------------
+
+Opportunities <- function(res_dt, conf_opt = NULL) {
+  
+ 
+  # limit length of memo
+  memo_limit = conf_opt$maxMemo
+  res_dt[, memo:= str_sub(memo, 1, memo_limit)]
+  
+  # limit economics
+  economics_limit = conf_opt$maxEconomics
+  res_dt[, custbodyproposed_economics:= str_sub(custbodyproposed_economics, 1, economics_limit)]
+  
+  # change Hot opportunity to T / F
+  res_dt[custbodyhot_opportunity=='checked', custbodyhot_opportunity := "T"]
+  res_dt[custbodyhot_opportunity=='unchecked', custbodyhot_opportunity := "F"]
+  
+  return(res_dt)
+}
+

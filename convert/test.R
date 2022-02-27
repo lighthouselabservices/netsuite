@@ -2,9 +2,9 @@
 source("global.R")
 #  ---- test leads conversion ----
 
-conversion_type = "Prospects"
+conversion_type = "Leads"
 if(conversion_type == 'Prospects') fl_in <-"E:/Netsuite/CopperCRM/prospect for go live.csv"
-if(conversion_type == 'Leads')fl_in <-"E:/Netsuite/CopperCRM/leads.csv"
+if(conversion_type == 'Leads')fl_in <-"E:/Netsuite/CopperCRM/leads 200220227.csv"
 if(conversion_type == 'Opportunities')fl_in <-"E:/Netsuite/CopperCRM/opp go live v. 4 PRE conversion.csv"
 
 message('Processing ', conversion_type)
@@ -35,7 +35,6 @@ if (class(PostProcess) != "try-error") res = PostProcess(res_dt, conf_opt) else 
 # Common post processing
 res <- CommonPostProcessiing(res)
 
-
 anyDuplicated(res$uniqueId)
 
 if(!is.null(res$comments)) message(" Max comment: ", max(nchar(res$comments)))
@@ -52,6 +51,7 @@ if(conversion_type == 'Opportunities'){
   
   res$externalID <- as.character(res$externalID)
   res = res %>% merge(map[,.(externalID, prospectExternalID)], by = 'externalID')
+  
   
 }
 

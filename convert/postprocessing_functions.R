@@ -19,7 +19,6 @@ Leads <- function(res_dt, conf_opt = NULL) {
   max_phone_number = conf_opt$maxPhoneLenght
   res_dt[, phone:= str_sub(phone, 1, max_phone_number)] 
 
-  # fill individual last name and first name
   if (is.null(conf_opt)) {
     return(res_dt)
   }
@@ -59,18 +58,36 @@ Leads <- function(res_dt, conf_opt = NULL) {
   res_dt[Individual == "Y" & `Last Name` == "", `Last Name` := name_replace]
   res_dt[Individual == "Y" & `first Name` == "", `first Name` := name_replace]
   
+  # change sales rep name
+  if('salesrep' %in% names(res_dt)){
+    
+    # limit lenght
+    res_dt$salesrep <- res_dt$salesrep %>% str_squish()
+    sales_rep <- str_split_fixed(res_dt$salesrep, " ", 2)
+    sales_rep[,2] <-  paste0(str_to_title( sales_rep[,2] ), ",")  
+    res_dt$salesrep <- paste(sales_rep[,2], str_to_title( sales_rep[,1] )  )
+    
+    # re-assign leads to Rondi
+    
+    res_dt[salesrep == '', salesrep:="Wellum, Rondi"]
+    res_dt[salesrep == 'Phillips, Jessie', salesrep:="Wellum, Rondi"]
+    res_dt[salesrep == 'Harol, Jon', salesrep:="Wellum, Rondi"]
+    
+    
+  }
+  
   # add unique id
   unique_id_len <- conf_opt$idLength
   res_dt[, uniqueId := paste0(`first Name`, `Last Name`, companyname) %>% str_squish()]
 
-  res_dt$uniqueId <- sapply(res_dt$uniqueId, function(x) {
+  res_dt$externalID <- sapply(res_dt$uniqueId, function(x) {
     charToRaw(x) %>%
       as.character() %>%
       paste0(collapse = "") %>%
       str_sub(1, unique_id_len)
   }, USE.NAMES = F)
 
-  res_dt <- unique(res_dt, by = "uniqueId")
+  res_dt <- unique(res_dt, by = "externalID")
   
 
   return(res_dt)
@@ -142,7 +159,27 @@ CommonPostProcessiing <- function(res_dt){
  
   # clean phone number
   if('phone' %in% names(res_dt)){
+    
+    # remove '
     res_dt$phone <- res_dt$phone %>% str_remove_all("'")
+    
+    # remove letters
+    res_dt$phone <- res_dt$phone %>% str_remove_all("[:alpha:]")
+    
+    # limit lenght
+    res_dt$phone <- res_dt$phone %>% str_sub(1,32)
+    
+    # remove below min lenght (10)
+    res_dt[nchar(phone)<10, phone:='']
+    
+    
+  }
+  
+  
+  # clean first name
+  if('first Name' %in% names(res_dt)){
+    # limit lenght
+    res_dt$`first Name` <- res_dt$`first Name`  %>% str_sub(1,32)
   }
   
   return(res_dt)

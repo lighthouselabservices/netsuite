@@ -25,17 +25,6 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: primary.person.contact
-
-  - netsuiteId: custbodystatus
-    type: text
-    fieldSource: field # field / formula / const
-    copperField: Status
-    default: open
-    allowedValues:
-      - Open 
-      - Won
-      - Abandoned
-      - Lost
       
   - netsuiteId: custbodyhot_opportunity
     type: checkbox
@@ -213,6 +202,19 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Stage.Classification.cf_505796
+    
+  - netsuiteId: custbodystatus
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Stage
+    allowedValues:
+      - Discussion
+      - Negotiation
+      - Proposal Sent
+      - Proposal Approved
+      - Contract Sent
+      - Contract Negotiation
+      - Won/Close
     
   - netsuiteId: custbodytesting_startup
     type: text

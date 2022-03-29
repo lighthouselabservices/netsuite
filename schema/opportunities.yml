@@ -30,6 +30,7 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Status
+    default: open
     allowedValues:
       - Open 
       - Won
@@ -56,9 +57,8 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Loss.Reason
+    default: 
     allowedValues:
-      - Open Opp
-      - No Loss Reason
       - Price
       - Features
       - Competitor

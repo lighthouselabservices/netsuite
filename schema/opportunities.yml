@@ -41,17 +41,6 @@ opportunities:
     allowedValues:
       - "No"
       - "Yes" 
-
-  - netsuiteId: winlossreason
-    type: text
-    fieldSource: field # field / formula / const
-    copperField: Loss.Reason
-    default: 
-    allowedValues:
-      - Price
-      - Features
-      - Competitor
-      - Lack of Budget
       
   - netsuiteId: probability
     type: text

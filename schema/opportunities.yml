@@ -26,7 +26,7 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: primary.person.contact
 
-  - netsuiteId: entitystatus
+  - netsuiteId: custbodystatus
     type: text
     fieldSource: field # field / formula / const
     copperField: Status

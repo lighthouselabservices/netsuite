@@ -4,6 +4,12 @@ opportunities:
     type: text
     fieldSource: field # field / formula / const
     copperField: Company
+    
+ opportunities: custbody3
+  - netsuiteId: Company
+    type: text
+    fieldSource: field # field / formula / const
+    copperField: Company
 
   - netsuiteId: expectedclosedate
     type: text

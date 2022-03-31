@@ -5,8 +5,7 @@ opportunities:
     fieldSource: field # field / formula / const
     copperField: Company
     
- opportunities: custbody3
-  - netsuiteId: Company
+  - netsuiteId: custbody3
     type: text
     fieldSource: field # field / formula / const
     copperField: Company
